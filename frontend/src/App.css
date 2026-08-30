@@ -22,13 +22,6 @@
   padding: 80px 20px;
 }
 
-#hero .search-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 420px;
-  margin: 24px auto 0;
-}
-
 #hero input {
   width: 100%;
   padding: 12px 20px 12px 44px;
@@ -36,16 +29,6 @@
   border: 1px solid var(--border);
   font-size: 16px;
   box-sizing: border-box;
-}
-
-#hero .search-icon {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  opacity: 0.6;
 }
 
 .hero {
