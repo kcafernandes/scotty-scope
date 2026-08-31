@@ -2,6 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import ResultsPage from './components/ResultsPage'
 import SearchBar from './components/SearchBar'
+import CoursePage from './components/CoursePage'
 
 function App() {
 
