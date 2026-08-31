@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/Header'
+import ResultsPage from './components/ResultsPage'
 import SearchBar from './components/SearchBar'
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
           <p>
           Scope out UCR courses, professors, prerequisites, and student insights—all in one place.
           </p>
-          <SearchBar/>
+          <SearchBar/> 
         </div>
       </section>
     </>
