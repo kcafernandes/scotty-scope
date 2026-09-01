@@ -22,7 +22,7 @@ function CoursePage(){
 
             <div className="info-grid">
                 <div className="info-block block-description">
-                    <h3>Description</h3>
+                    <h3>Course Description</h3>
                     <p>{mockCourse.description}</p>
                 </div>
 
