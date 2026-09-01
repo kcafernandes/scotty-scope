@@ -1,6 +1,8 @@
+import { useParams } from 'react-router-dom'
 import './ResultsPage.css'
 
 function ResultsPage(){
+    const { subject }= useParams()
     // make a list of objects that include course code + name of the class
     // ex: CS 111 - Discrete Structures
 
@@ -12,7 +14,7 @@ function ResultsPage(){
 
     return(
         <section className="results-page">
-            <h2>Results for Math</h2>
+            <h2>Results for {subject}</h2>
 
             {mockCourses.length === 0 && (
                 <p>No courses found :(</p>
