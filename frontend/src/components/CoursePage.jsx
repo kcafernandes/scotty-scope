@@ -1,6 +1,9 @@
 import './CoursePage.css'
+import { useParams } from 'react-router-dom'
 
 function CoursePage(){
+    const { courseCode } = useParams()
+
     // mock data to test page setup
     // real data will come from later backend implementation
     const mockCourse = {
@@ -18,7 +21,7 @@ function CoursePage(){
 
     return(
         <section className="course-page">
-            <h2>{mockCourse.code}: {mockCourse.title}</h2>
+            <h2>{courseCode}</h2>
 
             <div className="info-grid">
                 <div className="info-block block-description">
