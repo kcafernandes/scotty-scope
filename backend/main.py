@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
 
@@ -12,6 +12,10 @@ mock_courses = [
 def read_root():
     return {"message" : "scotty scope backend is running"}
 
-@app.get("/courses")
-def get_courses():
-    return mock_courses
+@app.get("/courses/{code}")
+def get_course(code:str):
+    for course in mock_courses:
+        if course["code"] == code:
+            return course
+        
+    raise HTTPException(status_code=404, detail="Course not found")
