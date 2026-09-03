@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_USER: scotty
+      POSTGRES_PASSWORD: scotty_dev_password
+      POSTGRES_DB: scotty_scope
+    ports: 
+    - "5432:5432"
+    volumes:
+    - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
