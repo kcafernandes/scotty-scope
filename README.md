@@ -14,4 +14,14 @@ By building Scotty Scope, I hope to simplify this process for fellow UCR student
 - **Database:** PostgreSQL, running in Docker
 - **ORM:** SQLAlchemy
 
+### Status
+
+Currently in active development. Progress so far:
+
+- ✅ Frontend skeleton — search flow, results page, course page
+- ✅ Backend skeleton — FastAPI routes, connected to the frontend
+- 🔄 Database integration — PostgreSQL and SQLAlchemy models in place, migrating from mock data to real queries
+
+See [open issues](https://github.com/kcafernandes/scotty-scope/issues) for what's in progress.
+
 > This project is currently in development, and its features and scope may change.
