@@ -7,4 +7,11 @@ Most people may agree that course registration is often very time consuming and 
 
 By building Scotty Scope, I hope to simplify this process for fellow UCR students by making all relevant course information accessible in one place.
 
+### Tech Stack
+
+- **Frontend:** React (Vite)
+- **Backend:** FastAPI (Python)
+- **Database:** PostgreSQL, running in Docker
+- **ORM:** SQLAlchemy
+
 > This project is currently in development, and its features and scope may change.
