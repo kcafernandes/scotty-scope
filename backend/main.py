@@ -1,17 +1,13 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from database import engine, Base
+from sqlalchemy.orm import Session
+from database import engine, Base, get_db
 import models
+from models import Course
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
-
-mock_courses = [
-    {"code": "MATH 009A", "title": "First-Year Calculus"},
-    {"code": "MATH 031", "title": "Linear Algebra"},
-    {"code": "MATH 046", "title": "Differential Equations"},
-]
 
 app.add_middleware(
     CORSMiddleware,
@@ -22,16 +18,21 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"message" : "scotty scope backend is running"}
+    return {"message": "scotty scope backend is running"}
 
 @app.get("/courses")
-def get_courses():
-    return mock_courses
+def get_courses(db: Session = Depends(get_db)):
+    return db.query(Course).all()
 
 @app.get("/courses/{code}")
-def get_course(code:str):
-    for course in mock_courses:
-        if course["code"] == code:
-            return course
-        
-    raise HTTPException(status_code=404, detail="Course not found")
+def get_course(code: str, db: Session = Depends(get_db)):
+    subject_code, number = code.split(" ", 1)
+    course = (
+        db.query(Course)
+        .join(models.Subject)
+        .filter(models.Subject.code == subject_code, Course.number == number)
+        .first()
+    )
+    if course is None:
+        raise HTTPException(status_code=404, detail="Course not found")
+    return course
