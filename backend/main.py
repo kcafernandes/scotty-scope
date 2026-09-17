@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import engine, Base, get_db
 import models
-from models import Course
+from models import Course, Subject
 
 Base.metadata.create_all(bind=engine)
 
@@ -36,3 +36,7 @@ def get_course(code: str, db: Session = Depends(get_db)):
     if course is None:
         raise HTTPException(status_code=404, detail="Course not found")
     return course
+
+@app.get("/subjects")
+def get_subjects(db: Session = Depends(get_db)):
+    return db.query(Subject).all()
