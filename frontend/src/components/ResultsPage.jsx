@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './ResultsPage.css'
 
@@ -23,9 +23,11 @@ function ResultsPage(){
             {courses.length > 0 && (
                 <ul className="course-list">
                 {courses.map((course) => (
-                  <li key={course.code} className="course-card">
-                    <span className="course-code">{course.code}</span>
-                    <span className="course-title">{course.title}</span>
+                  <li key={course.id} className="course-card">
+                    <Link to={`/course/${course.subject.code} ${course.number}`}>
+                      <span className="course-code">{course.subject.code} {course.number}</span>
+                      <span className="course-title">{course.title}</span>
+                    </Link>
                   </li>
                 ))}
               </ul>
