@@ -1,0 +1,1253 @@
+[
+ {
+  "subject": "CS",
+  "number": "005",
+  "title": "Introduction to Computer Programming",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to computer programming for nonengineering and nonscience majors and for those considering taking CS 010A but needing additional preparation. Topics include the history of computing, basic computer operation, the notion of an algorithm, and programming constructs such as variables, expressions, input/output, branches, loops, functions, parameters, arrays, and strings. Credit is not awarded for CS 005 if it has already been awarded for CS 010A.",
+  "prerequisites_text": ""
+ },
+ {
+  "subject": "CS",
+  "number": "006",
+  "title": "Effective Use of the World Wide Web",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A detailed introduction to the Internet for non-engineering majors. Covers Web tools, e-communities, e-commerce, power searching, and verification of information, privacy, and other legal and societal issues.",
+  "prerequisites_text": ""
+ },
+ {
+  "subject": "CS",
+  "number": "008",
+  "title": "Introduction to Computing",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Includes operating system basics (Windows and Unix), word processing, spreadsheets, databases (e.g., Access), e-mail, the Internet, and the World Wide Web. Designed for students not majoring in computer science, engineering, mathematics, or science. Credit is not awarded for CS 008 if it has already been awarded for CS 010A.",
+  "prerequisites_text": ""
+ },
+ {
+  "subject": "CS",
+  "number": "009A",
+  "title": "Data Oriented Introduction to Computing I",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers computational thinking, problem-solving, and data analysis using the Python language through application- based data manipulation tasks from science, engineering, business, and the humanities. Includes variables, expressions, branches, loops, functions, parameters, lists, strings, file I/O, and exception handling. Also covers software design, testing, and debugging. Credit is awarded for one of the following CS 009A or CS 010A. Credit is not awarded for CS 005 or CS 008 if it has already been awarded for CS 009A.",
+  "prerequisites_text": "MATH 004, may be taken concurrently or MATH 005A, may be taken concurrently or MATH 006A, may be taken concurrently or MATH 006B, may be taken concurrently or MATH 007A, may be taken concurrently or MATH 009A, may be taken concurrently or MATH 09HA, may be taken concurrently or MATH 022, may be taken concurrently"
+ },
+ {
+  "subject": "CS",
+  "number": "009B",
+  "title": "Data Oriented Introduction to Computing Ii",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers advanced programming concepts and algorithms through application-based data manipulation tasks from science, engineering, business, and the humanities. Emphasizes good programming principles in the design and development of substantial programs using the Python language. Topics include abstract data types, objects and classes, recursion, and basic software engineering principles. Credit is awarded for one of the following CS 009B or CS 010B.",
+  "prerequisites_text": "CS 009A with a grade of C- or better, CS 09HA with a grade of C- or better; or equivalent"
+ },
+ {
+  "subject": "CS",
+  "number": "009C",
+  "title": "C++ For Programmers",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Provides an introduction to the constructs provided in the C++ for procedural and object-oriented programming for students with prior experience in another object-oriented programming language. Topics include basic C++, containers such as vectors, I/O, memory management, object- oriented programming and design, unit testing, debugging and the build process.",
+  "prerequisites_text": "CS 009B; MATH 006B, may be taken concurrently or MATH 007A, may be taken concurrently or MATH 005A, may be taken concurrently or MATH 004, may be taken concurrently or MATH 009A, may be taken concurrently or MATH 09HA, may be taken concurrently"
+ },
+ {
+  "subject": "CS",
+  "number": "010A",
+  "title": "Introduction to Computer Science For Science, Mathematics, and Engineering I",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers problem solving through structured programming of algorithms on computers using the C++ object-oriented language. Includes variables, expressions, input/output (I/O), branches, loops, functions, parameters, arrays, strings, file I/O, and classes. Also covers software design, testing, and debugging. Credit is awarded for one of the following CS 010A or CS 009A. Credit is not awarded for CS 005 or CS 008 if it has already been awarded for CS 010A.",
+  "prerequisites_text": "MATH 005A, may be taken concurrently or MATH 006A, may be taken concurrently or MATH 006B, may be taken concurrently or MATH 007A, may be taken concurrently or MATH 009A, may be taken concurrently or MATH 09HA"
+ },
+ {
+  "subject": "CS",
+  "number": "010B",
+  "title": "Introduction to Computer Science For Science, Mathematics, and Engineering 2",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers structured and object-oriented programming in C++. Emphasizes good programming principles and development of substantial programs. Topics include recursion, pointers, linked lists, abstract data types, and libraries. Also covers software engineering principles. Credit is awarded for one of the following CS 010B or CS 009B.",
+  "prerequisites_text": "CS 010A with a grade of C- or better; familiarity with C or C++ language"
+ },
+ {
+  "subject": "CS",
+  "number": "010C",
+  "title": "Introduction to Data Structures and Algorithms",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Topics include basic data structures such as arrays, lists, stacks, and queues. Covers dictionaries (including binary search trees and hashing) and priority queues (heaps). Offers an introductory analysis of algorithms, sorting algorithms, and object-oriented programming including abstract data types, inheritance, and polymorphism. Explores solving complex problems through structured software development.",
+  "prerequisites_text": "CS 010B with a grade of C- or better or CS 009C with a grade of C- or better; proficiency in C++"
+ },
+ {
+  "subject": "CS",
+  "number": "011",
+  "title": "Introduction to Discrete Structures",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to basic concepts of discrete mathematics emphasizing applications to computer science. Topics include propositional and predicate calculi, elementary set theory, functions, relations, proof techniques, elements of number theory, enumeration, and discrete probability. Cross-listed with MATH 011.",
+  "prerequisites_text": "CS 009A or CS 010A or MATH 005C or MATH 007B or MATH 009B or MATH 09HB"
+ },
+ {
+  "subject": "CS",
+  "number": "015",
+  "title": "Introduction to Data Science",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Provides an introduction to data science with an emphasis on empirical analysis of real-world data sets through computation. Explores critical concepts and skills in computer programming and statistical inference. Covers the Data Science life-cycle including data collection, data cleaning and integration, visualization, and analysis.",
+  "prerequisites_text": "CS 009A with a grade of C- or better"
+ },
+ {
+  "subject": "CS",
+  "number": "042",
+  "title": "A Hitchhiker’s Guide to Artificial Intelligence (ai)",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Surveys basic concepts and techniques underpinning modern AI including problem solving, automated reasoning, game AI, vision and language, neural networks, and robotics. Explores history, ethics, use cases, and applications. Introduces basic use of Python for building and using AI but expects no prior experience. Intended for non-engineering majors.",
+  "prerequisites_text": "none"
+ },
+ {
+  "subject": "CS",
+  "number": "061",
+  "title": "Machine Organization and Assembly Language Programming",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to computer organization. Topics include number representation, combinational and sequential logic, computer instructions, memory organization, addressing modes, interrupt, input/output (I/O), assembly language programming, assemblers, and linkers. Upper-Division Courses",
+  "prerequisites_text": "CS 009A with a grade of C- or better or CS 010A with a grade of C- or better"
+ },
+ {
+  "subject": "CS",
+  "number": "100",
+  "title": "Software Construction",
+  "min_units": 5,
+  "max_units": 5,
+  "description": "Emphasizes development of software systems. Topics include design and implementation strategies and selection and mastery of programming languages, environment tools, and development processes. Develops skill in programming, testing, debugging, performance evaluation, component integration, maintenance, and documentation. Covers professional and ethical responsibilities and the need to stay current with technology.",
+  "prerequisites_text": "CS 010C with a grade of C- or better"
+ },
+ {
+  "subject": "CS",
+  "number": "105",
+  "title": "Data Analysis Methods",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to fundamental concepts and methods in data analysis and visualization essential to a variety of data science tasks. Designed to provide preparation for the data science major and for advanced courses in data analysis and applications of data science.",
+  "prerequisites_text": "CS 009B with a grade of C- or better or CS 010B with a grade of C- or better; restricted to class level standing of sophomore, junior, senior, or masters"
+ },
+ {
+  "subject": "CS",
+  "number": "106",
+  "title": "Introduction to Computer Security",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "5 hours; individual study, 1.5 hours. Prerequisite(s): CS 011 or MATH 011; CS 061; CS 010C; or consent of instructor. Introduction to security in computer systems and online services for computing majors. Studies security impact in computer science. Topics include both offensive and defensive security techniques, security mindset and concepts, and applications to real-world problems.",
+  "prerequisites_text": ""
+ },
+ {
+  "subject": "CS",
+  "number": "108",
+  "title": "Data Science Ethics",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers ethics specifically related to data science. Topics include data privacy; data curation and storage; discrimination and bias arising in the machine learning process; statistical topics such as generalization, causality, curse of dimensionality, and sampling bias; data communication; and strategies for conceptualizing, measuring, and mitigating problems in data-driven decision- making. Cross-listed with STAT 108. Credit is awarded for one of the following CS 108, STAT 108, CS 212, or STAT 212.",
+  "prerequisites_text": "CS 105 or STAT 107 or CS 171; or consent of instructor"
+ },
+ {
+  "subject": "CS",
+  "number": "110",
+  "title": "Principles of Web Development",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Provides an introduction to distributed systems, with a focus on web development techniques and the considerations to application scalability, security, reliability, and redundancy. Provides an in-depth study of technologies used for both back-end and front-end development, and how to design robust applications in the webs constantly evolving landscape.",
+  "prerequisites_text": "CS 100"
+ },
+ {
+  "subject": "CS",
+  "number": "111",
+  "title": "Discrete Structures",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A study of discrete mathematical structures emphasizing applications to computer science. Topics include number theory and cryptography, asymptotic notation, recurrence equations, counting methods, elements of graph theory, and trees.",
+  "prerequisites_text": "CS 011 or MATH 011; MATH 009C or MATH 09HC; MATH 031 or EE 020B, CS 009A with a grade of C- or better or CS 010A with a grade of C- or better"
+ },
+ {
+  "subject": "CS",
+  "number": "119L",
+  "title": "Laboratory in Problem Solving and Programming",
+  "min_units": 2,
+  "max_units": 2,
+  "description": "Explores techniques and skills applicable in developing software solutions to real-life algorithmic problems. Emphasizes systematic and rigorous approaches to problem- solving. Covers the end-to-end solution process including formulating models, choosing appropriate algorithmic tools and data structures, designing algorithms, implementation, and testing. Course is repeatable to a maximum of 4 units.",
+  "prerequisites_text": "CS 010C with a grade of C- or better; CS 111 recommended; or consent of instructor"
+ },
+ {
+  "subject": "CS",
+  "number": "120A",
+  "title": "Logic Design",
+  "min_units": 5,
+  "max_units": 5,
+  "description": "Covers design of digital systems. Includes Boolean algebra; combinational and sequential logic design; design and use of arithmetic logic units, carry-lookahead adders, multiplexors, decoders, comparators, multipliers, flip-flops, registers, and simple memories; state-machine design; and basic register-transfer level design. Uses hardware description languages, synthesis tools, programmable logic, and significant hardware prototyping. Cross-listed with EE 120A.",
+  "prerequisites_text": "CS 061 with a grade of C- or better"
+ },
+ {
+  "subject": "CS",
+  "number": "120B",
+  "title": "Introduction to Embedded Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to hardware and software design of digital computing systems embedded in electronic devices (e.g., digital cameras or portable video games). Includes embedded processor programming, standard peripherals, interfacing, and hardware/software tradeoffs. Involves use of microcontrollers and developing working embedded systems. Cross-listed with EE 120B.",
+  "prerequisites_text": "CS 010C with a grade of C- or better or EE 016 with a grade of C- or better; CS 120A with a grade of C- or better or EE 120A with a grade of C- or better"
+ },
+ {
+  "subject": "CS",
+  "number": "122",
+  "title": "Intermediate Embedded and Real- Time Systems",
+  "min_units": 5,
+  "max_units": 5,
+  "description": "Covers software and hardware design of embedded computing systems. Includes hardware and software codesign, advanced programming paradigms (including state machines and concurrent processes), real- time programming, operating systems, basic control systems, modern chip, and design technologies. Laboratories involve use of microcontrollers, embedded microprocessors, programmable logic, advanced simulation, and debug environments.",
+  "prerequisites_text": "CS 010B; CS 120B or EE 120B"
+ },
+ {
+  "subject": "CS",
+  "number": "130",
+  "title": "Computer Graphics",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A study of the fundamentals of computer graphics necessary to design and build graphics applications. Examines raster graphics algorithms including scan-converting graphics primitives, anti-aliasing, and clipping. Also covers geometric transformations, viewing, solid modeling techniques, hidden- surface removal algorithms, color models, illumination, and shading.",
+  "prerequisites_text": "CS 100; MATH 031, may be taken concurrently or EE 020B, may be taken concurrently; or consent of instructor"
+ },
+ {
+  "subject": "CS",
+  "number": "131",
+  "title": "Edge Computing",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers industry standards for quality of service and security while leveraging performance constraints. Develops skill in deploying real- world applications using embedded artificial intelligence. Cross-listed with EE 131.",
+  "prerequisites_text": "CS 100 or EE 120B or CS 120B"
+ },
+ {
+  "subject": "CS",
+  "number": "133",
+  "title": "Computational Geometry",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to the design of geometry algorithms. Covers the basic computational geometry concepts and techniques used in graphics, robotics, and engineering design. Topics include polygons and polytopes, convex hulls, and voronoi diagrams.",
+  "prerequisites_text": "CS 100, CS 111, MATH 031; or equivalents"
+ },
+ {
+  "subject": "CS",
+  "number": "135",
+  "title": "Virtual Reality",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the development of virtual reality (VR) worlds, including motion and physics of VR worlds. Includes design practices for immersive experiences, human visual perception, environmental and social interactions. Also includes positional tracking with sensors, augmented and mixed reality, and storage and transmission of virtual reality worlds.",
+  "prerequisites_text": "CS 100"
+ },
+ {
+  "subject": "CS",
+  "number": "141",
+  "title": "Intermediate Data Structures and Algorithms",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Explores basic algorithm analysis using asymptotic notations, summation and recurrence relations, and algorithms and data structures for discrete structures including trees, strings, and graphs. Also covers general algorithm design techniques including “divide-and-conquer,” the greedy method, and dynamic programming. Integrates knowledge of data structures, algorithms, and programming.",
+  "prerequisites_text": "CS 010C with a grade of C- or better; CS 111; MATH 009C or MATH 09HC; proficiency in C++"
+ },
+ {
+  "subject": "CS",
+  "number": "142",
+  "title": "Algorithm Engineering",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the design and implementation of sequential, parallel, cache-efficient, external-memory, and write-efficient algorithms for fundamental computational problems including sorting, searching, as well as a selection of problems in algebra, geometry, combinatorial optimization, and string processing. Emphasizes practical aspects of algorithm design, efficient implementation, and experimental methodology for performance evaluation.",
+  "prerequisites_text": "CS 100, CS 141; or equivalent"
+ },
+ {
+  "subject": "CS",
+  "number": "144",
+  "title": "Algorithms For Bioinformatics",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduces fundamental algorithms and data structures for solving analytical problems in molecular biology and genomics. Includes exact and approximate string matching; sequence alignment; genome assembly; and gene and regulatory motifs recognition. Credit is awarded for one of the following CS 144, CS 234, or CS 238.",
+  "prerequisites_text": "CS 141"
+ },
+ {
+  "subject": "CS",
+  "number": "145",
+  "title": "Combinatorial Optimization Algorithms",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "The study of efficient algorithm design techniques for combinatorial optimization problems. Topics include shortest paths, minimum spanning trees, network flows, maximum matchings, stable matchings, linear programming, duality, two-person games, algorithmic techniques for integer programming problems, NP-completeness, and approximation algorithms.",
+  "prerequisites_text": "CS 141; MATH 031 or MATH 131"
+ },
+ {
+  "subject": "CS",
+  "number": "147",
+  "title": "Graphics Processing Unit Computing and Programming",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduces principles and practices of programming graphics processing units (GPUs) using the parallel programming environment. Covers memory/threading models, common data- parallel programming patterns and libraries needed to develop high-performance parallel computing applications. Examines computational thinking; a broader range of parallel execution models; and parallel programming principles. Cross-listed with EE 147.",
+  "prerequisites_text": "CS 120B or EE 120B or CS 100"
+ },
+ {
+  "subject": "CS",
+  "number": "148",
+  "title": "Artificial Intelligence For Robotics",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers essential aspects of intelligent robot behavior focusing on reactive, deliberative, and interactive capabilities for safe, efficient interactions with environments, other robots, and humans. Discusses planning, actions, knowledge representation, perception-action feedback loops, decision-making under uncertainty, task and motion planning, robot learning, and ethical considerations in autonomous robot design. Cross-listed with EE 148.",
+  "prerequisites_text": "MATH 031 or EE 020B or ME 0188; EE 016 or CS 100; restricted to class level standing of junior, senior, or masters; or consent of instructor"
+ },
+ {
+  "subject": "CS",
+  "number": "150",
+  "title": "Automata and Formal Languages",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A study of formal languages. Includes regular and context-free languages; computational models for generating these languages such as finite-state automata, pushdown automata, regular expressions, and context- free grammars; mathematical properties of the languages and models; and equivalence between the models. Also introduces Turing machines and decidability.",
+  "prerequisites_text": "CS 010C with a grade of C- or better; CS 111; MATH 009C or MATH 09HC"
+ },
+ {
+  "subject": "CS",
+  "number": "152",
+  "title": "Compiler Design",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the fundamentals of compiler design. Includes lexical analysis, parsing, semantic analysis, compile-time memory organization, run-time memory organization, code generation, and compiler portability issues.",
+  "prerequisites_text": "CS 061; CS 100; CS 111; CS 150"
+ },
+ {
+  "subject": "CS",
+  "number": "153",
+  "title": "Design of Operating Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the principles and practice of operating system design. Includes concurrency, memory management, file systems, protection, security, command languages, scheduling, and system performance.",
+  "prerequisites_text": "CS 061; CS 100; CS 111; C++ programming proficiency"
+ },
+ {
+  "subject": "CS",
+  "number": "160",
+  "title": "Concurrent Programming and Parallel Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A study of concurrent and parallel systems. Topics include modular structure and design, interprocess communication, synchronization, failures, persistence, and concurrency control. Also covers atomic transactions, recovery, language support, distributed interprocess communication, and implementation mechanisms. Provides preparation for the study of operating systems, databases, and computer networking.",
+  "prerequisites_text": "CS 061; CS 100; CS 111"
+ },
+ {
+  "subject": "CS",
+  "number": "161",
+  "title": "Design and Architecture of Computer Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A study of the fundamentals of computer design. Topics include the performance evaluation of microprocessors; instruction set design and measurements of use; microprocessor implementation techniques including multicycle and pipelined implementations; computer arithmetic; memory hierarchy; and input/output (I/O) systems.",
+  "prerequisites_text": "EE 120A or CS 120A"
+ },
+ {
+  "subject": "CS",
+  "number": "161L",
+  "title": "Laboratory in Design and Architecture of Computer Systems",
+  "min_units": 2,
+  "max_units": 2,
+  "description": "Covers the design and simulation of a complete computer system using hardware description language and simulator. Topics include instruction set architecture design; assemblers; datapath and control unit design; arithmetic and logic unit; memory and input/output (I/O) systems; and integration of all parts into a working computer system.",
+  "prerequisites_text": "CS 161 (may be taken concurrently)"
+ },
+ {
+  "subject": "CS",
+  "number": "162",
+  "title": "Computer Architecture",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "The study of advanced processor design. Topics include CPU pipelining, data and control hazards, instruction-level parallelism, branch prediction, and dynamic scheduling of instructions. Also covers Very Long Instruction Word (VLIW) processing, multimedia support, design of network and embedded processors, basic multiprocessor design, shared memory and message passing, and network topologies.",
+  "prerequisites_text": "CS 161 with a grade of “C-” or better"
+ },
+ {
+  "subject": "CS",
+  "number": "163",
+  "title": "Introduction to Privacy Technologies",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers issues regarding privacy in computer systems and online services. Introduces techniques for mitigating privacy threats through security and cryptography controls. Topics also include socio-technical aspects of privacy including law, ethics, and psychology.",
+  "prerequisites_text": "CS 100; CS 165 is recommended; restricted to class level standing of junior, or senior; or consent of instructor"
+ },
+ {
+  "subject": "CS",
+  "number": "164",
+  "title": "Computer Networks",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the fundamentals of computer networks. Topics include layered network architecture, communication protocols, local area networks, UNIX network programming, verification, network security, and performance studies.",
+  "prerequisites_text": "CS 100; CS 111; CS 153"
+ },
+ {
+  "subject": "CS",
+  "number": "165",
+  "title": "Computer Security",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Examines the ways in which information systems are vulnerable to security breaches. Topics include attacks; security labels, lattices, and policies; safeguards and countermeasures; intrusion detection; authorization and encryption techniques; networks; digital signatures, certificates, and passwords; privacy issues, firewalls, and spoofing; Trojan horses and computer viruses; CERT Coordination Center; and electronic commerce.",
+  "prerequisites_text": "CS 141, CS 153"
+ },
+ {
+  "subject": "CS",
+  "number": "166",
+  "title": "Database Management Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers basic concepts of databases and database management systems. Topics include entity-relationship modeling for design, relational data model, relational algebra, Structured Query Language (SQL), secondary storage, indexing and hashing, query evaluation and optimization, and overview of transactions.",
+  "prerequisites_text": "CS 100; CS 111"
+ },
+ {
+  "subject": "CS",
+  "number": "167",
+  "title": "Introduction to Big-Data Management",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduces the architecture of big-data systems and their applications in data management and processing. Describes the common functionality in big-data processing such as distributed storage, resource management, query processing, fault-tolerance, and programming APIs. Covers the popular big- data technologies such as distributed shared- nothing systems, NoSQL processing model, and semi-structured data management.",
+  "prerequisites_text": "CS 100, CS 111; CS 167 online section: enrollment in the online Master-of- Science in Engineering program"
+ },
+ {
+  "subject": "CS",
+  "number": "168",
+  "title": "Introduction to Very Large Scale Integration Design",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Studies integrated circuit fabrication, device characterization, and circuit simulation. Introduces basic device physics and physical design rules, MOS logic design, and timing and clock schemes. Covers layout generation, subsystem designs, and circuits for alternative logic styles. Also covers design and simulation using hardware description language and CAD tools. Cross-listed with EE 168. Credit is awarded for one of the following EE 168, CS 168, or EE 282A.",
+  "prerequisites_text": "CS 120A or EE 120A; or consent of instructor"
+ },
+ {
+  "subject": "CS",
+  "number": "169",
+  "title": "Mobile Wireless Networks",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduces the fundamentals of wireless and mobile networks. Covers wireless channel models, MAC protocols, and wireless network architectures. Also covers cellular, WLAN and ad hoc networks, and routing in multi-hop wireless networks. Includes wireless security and the impact of wireless links on TCP and other transport layer solutions.",
+  "prerequisites_text": "CS 153 or consent of instructor"
+ },
+ {
+  "subject": "CS",
+  "number": "170",
+  "title": "Introduction to Artificial Intelligence",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to the field of artificial intelligence. Focuses on discrete-valued problems. Covers heuristic search, problem representation, and classical planning. Also covers constraint satisfaction and logical inference.",
+  "prerequisites_text": "CS 100 with a grade of “C-” or better, CS 111"
+ },
+ {
+  "subject": "CS",
+  "number": "171",
+  "title": "Introduction to Machine Learning and Data Mining",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduces formalisms and methods in data mining and machine learning. Topics include data representation, supervised learning, and classification. Covers regression and clustering. Also covers rule learning, function approximation, and margin-based methods. Cross-listed with EE 142.",
+  "prerequisites_text": "MATH 010A; MATH 031 or EE 020B; STAT 155 or EE 114 or STAT 156A or STAT 160A; CS 100 or EE 016"
+ },
+ {
+  "subject": "CS",
+  "number": "172",
+  "title": "Introduction to Information Retrieval",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduces information retrieval (IR) principles and techniques for indexing and searching document collections. Topics include Web search, text processing, ranking algorithms, search in social networks, and search evaluation. Also studies scalability issues in search engines.",
+  "prerequisites_text": "CS 100; CS 111; EE 114 or STAT 155 or STAT 156A or STAT 160A"
+ },
+ {
+  "subject": "CS",
+  "number": "173",
+  "title": "Introduction to Natural Language Processing",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An overview of modern approaches for natural language processing. Focuses on major algorithms used in NLP for various applications such as part-of-speech tagging, parsing, named entity recognition, coreference resolution, sentiment analysis, and machine translation.",
+  "prerequisites_text": "CS 100; CS 111; EE 114 or STAT 155 or STAT 156A or STAT 160A"
+ },
+ {
+  "subject": "CS",
+  "number": "175",
+  "title": "Entrepreneurship in Computing",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduces business and technological concepts to create companies based on computer technology. Covers technical aspects of real-world IT projects. Includes developing software and services; understanding user requirements; designating usable systems; and assessing technology. Addresses market analysis and strategy; legal and intellectual property; ethics and communication issues; and financial analysis.",
+  "prerequisites_text": "CS 100; restricted to class level standing of junior, or senior"
+ },
+ {
+  "subject": "CS",
+  "number": "177",
+  "title": "Modeling and Simulation",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers validation of random number sequences; concepts in modeling and systems analysis; and conceptual models and their mathematical and computer realizations. Examines simulation modeling techniques including object-oriented modeling and discrete-event modeling. Emphasizes the use of simulation libraries used with programming languages such as C++.",
+  "prerequisites_text": "CS 100; CS 111; C++ programming proficiency"
+ },
+ {
+  "subject": "CS",
+  "number": "178A",
+  "title": "Project Sequence in Computer Science and Engineering",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Incorporates the proposal, design, building, testing, and documenting of software and hardware devices or systems under the direction of a faculty member. Emphasizes professional and ethical responsibilities and the need to stay current on technology and its global impact on economics, society, and the environment. Completed together, CS 178A and CS 178B may be applied as a substitute for the CS 179 (E-Z) CS major requirement. Graded In Progress (IP) until CS 178A and CS 178B are completed, at which time, a final letter grade is assigned.",
+  "prerequisites_text": "CS 141, ENGR 180W; restricted to class level standing of senior"
+ },
+ {
+  "subject": "CS",
+  "number": "178B",
+  "title": "Project Sequence in Computer Science and Engineering",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Incorporates the proposal, design, building, testing, and documenting of software and hardware devices or systems under the direction of a faculty member. Emphasizes professional and ethical responsibilities and the need to stay current on technology and its global impact on economics, society, and the environment.",
+  "prerequisites_text": "CS 178A; restricted to class level standing of senior"
+ },
+ {
+  "subject": "CS",
+  "number": "179",
+  "title": "(E-Z) Project in Computer Science",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "For hours and prerequisites, see segment descriptions. Under the direction of a faculty member, student teams propose, design, build, test, and document software and/or hardware devices or systems. Emphasizes professional and ethical responsibilities and the need to stay current on technology and its global impact on economics, society, and the environment.",
+  "prerequisites_text": ""
+ },
+ {
+  "subject": "CS",
+  "number": "179E",
+  "title": "Project in Computer Science: Compilers",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the planning, design, implementation, testing, and documentation of a compiler- related system. Incorporates techniques from previous related courses. Emphasizes professional and ethical responsibilities; the need to stay current on technology; and its global impact on economics, society, and the environment.",
+  "prerequisites_text": "CS 100 and CS 152 with grades of “C-” or better; ENGR 180W; 8 additional upper-division units in Computer Science"
+ },
+ {
+  "subject": "CS",
+  "number": "179F",
+  "title": "Project in Computer Science: Operating Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the planning, design, implementation, testing, and documentation of an operating systems- related system. Incorporates techniques from previous related courses. Emphasizes professional and ethical responsibilities; the need to stay current on technology; and its global impact on economics, society, and the environment.",
+  "prerequisites_text": "CS 153 with a grade of “C-” or better; ENGR 180W; 8 additional upper-division units in Computer Science. CS 160 is recommended"
+ },
+ {
+  "subject": "CS",
+  "number": "179G",
+  "title": "Project in Computer Science: Database Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the planning, design, implementation, testing, and documentation of a database-related system. Incorporates techniques from previous related courses. Emphasizes professional and ethical responsibilities; the need to stay current on technology; and its global impact on economics, society, and the environment.",
+  "prerequisites_text": "CS 100 with a grade of C- or better; CS 166 with a grade of C- or better or CS 167 with a grade of C- or better, ENGR 180W; 8 additional upper- division units in Computer Science"
+ },
+ {
+  "subject": "CS",
+  "number": "179I",
+  "title": "Project in Computer Science: Networks",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the planning, design, implementation, testing, and documentation of a network- related system. Incorporates techniques from previous related courses. Emphasizes professional and ethical responsibilities; the need to stay current on technology; and its global impact on economics, society, and the environment.",
+  "prerequisites_text": "CS 100 and CS 164 with grades of “C-” or better; ENGR 180W; 8 additional upper-division units in Computer Science"
+ },
+ {
+  "subject": "CS",
+  "number": "179J",
+  "title": "Project in Computer Science: Computer Architecture and Embedded Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the planning, design, implementation, testing, and documentation of a computer architecture and embedded systems-related system. Incorporates using techniques presented in previous related courses. Emphasizes professional and ethical responsibilities; the need to stay current on technology; and its global impact on economics, society, and the environment.",
+  "prerequisites_text": "CS 100, CS 111, CS 120B/EE 120B, and CS 161 with grades of “C-” or better or consent of instructor; ENGR 180W; 3 additional upper-division units in Computer Science"
+ },
+ {
+  "subject": "CS",
+  "number": "179K",
+  "title": "Project in Computer Science: Software Engineering",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the planning, design, implementation, testing, and documentation of a software engineering-related system. Incorporates techniques presented in previous related courses. Emphasizes professional and ethical responsibilities; the need to stay current on technology; and its global impact on economics, society, and the environment.",
+  "prerequisites_text": "CS 180; ENGR 180W; 8 additional upper-division units in Computer Science"
+ },
+ {
+  "subject": "CS",
+  "number": "179M",
+  "title": "Project in Computer Science: Artificial Intelligence",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the planning, design, implementation, testing, and documentation of an artificial intelligence-related system. Incorporates techniques presented in previous related courses. Emphasizes professional and ethical responsibilities; the need to stay current on technology; and its global impact on economics, society, and the environment.",
+  "prerequisites_text": "CS 100, CS 111, and CS 170 with grades of “C-” or better; ENGR 180W; 8 additional upper-division units in Computer Science"
+ },
+ {
+  "subject": "CS",
+  "number": "179N",
+  "title": "Project in Computer Science: Graphics and Electronic Games",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the planning, design, implementation, testing, and documentation of a graphics or electronic game-related system. Incorporates using techniques presented in previous related courses. Emphasizes professional and ethical responsibilities; the need to stay current on technology; and its global impact on economics, society, and the environment.",
+  "prerequisites_text": "CS 130 with a grade of C- or better; ENGR 180W; 8 additional upper- division units in Computer Science"
+ },
+ {
+  "subject": "CS",
+  "number": "180",
+  "title": "Introduction to Software Engineering",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A study of software engineering techniques for the development, maintenance, and evolution of large software systems. Topics include requirements and specification; system design and implementation; debugging, testing, and quality assurance; reengineering; project management; software process; tools; and environments.",
+  "prerequisites_text": "CS 100"
+ },
+ {
+  "subject": "CS",
+  "number": "181",
+  "title": "Principles of Programming Languages",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers the principles of programming language design. Includes the study and comparison of several programming languages, their features, and their implementations.",
+  "prerequisites_text": "CS 061; CS 100; CS 111"
+ },
+ {
+  "subject": "CS",
+  "number": "182",
+  "title": "Software Testing and Verification",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A study of modern techniques to assess the quality of software artifacts through functional, performance, and reliability testing. Introduces black box and white box testing techniques. Covers the application of modern testing tools to software units, components, subsystems, and entire systems. Also covers verification as a complementary technique to testing.",
+  "prerequisites_text": "CS 100"
+ },
+ {
+  "subject": "CS",
+  "number": "183",
+  "title": "Unix System Administration",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Explores the technical aspects of system administration on a Unix system including advanced Unix. Includes managing system devices, operating system installation, communications, and networking.",
+  "prerequisites_text": "CS 100"
+ },
+ {
+  "subject": "CS",
+  "number": "189",
+  "title": "Apprentice Tutoring",
+  "min_units": 1,
+  "max_units": 1,
+  "description": "Aids in the learning of effective tutoring methods. Includes best practices for leading Computer Science tutoring sessions, growth mindset, learning modalities, and student relations. Graded Satisfactory (S) or No Credit (NC). Course is repeatable to a maximum of 4 units.",
+  "prerequisites_text": "permission established by computer science faculty; or consent of instructor"
+ },
+ {
+  "subject": "CS",
+  "number": "190",
+  "title": "Special Studies",
+  "min_units": 1,
+  "max_units": 5,
+  "description": "Individual study to meet special curricular needs. Course is repeatable to a maximum of 9 units.",
+  "prerequisites_text": "consent of instructor and department chair"
+ },
+ {
+  "subject": "CS",
+  "number": "191",
+  "title": "Seminar in Research Topics in Computer Science and Engineering",
+  "min_units": 1,
+  "max_units": 1,
+  "description": "An introduction to the range of research topics and methods in Computer Science and Engineering and to the research opportunities available within the department. Graded Satisfactory (S) or No Credit (NC). Course is repeatable to a maximum of 3 units.",
+  "prerequisites_text": "upper division or graduate standing or consent of instructor"
+ },
+ {
+  "subject": "CS",
+  "number": "193",
+  "title": "Design Project",
+  "min_units": 1,
+  "max_units": 4,
+  "description": "Individual hardware or software design project to include establishment of objectives and criteria, synthesis, analysis, implementation, testing, and documentation. Course is repeatable to a maximum of 8 units.",
+  "prerequisites_text": ""
+ },
+ {
+  "subject": "CS",
+  "number": "194",
+  "title": "Independent Reading",
+  "min_units": 1,
+  "max_units": 4,
+  "description": "Independent reading in material not covered in course work. Normally taken in senior year. Total credit for CS 194 may not exceed 8 units.",
+  "prerequisites_text": ""
+ },
+ {
+  "subject": "CS",
+  "number": "197",
+  "title": "Research For Undergraduates",
+  "min_units": 1,
+  "max_units": 4,
+  "description": "Directed research on a topic relevant to computer science. Requires a final written report. Course is repeatable to a maximum of 8 units.",
+  "prerequisites_text": "restricted to class level standing of junior, or senior; consent of Computer Science and Engineering undergraduate program advisor; and consent of instructor"
+ },
+ {
+  "subject": "CS",
+  "number": "198I",
+  "title": "Individual Internship in Computer Science",
+  "min_units": 1,
+  "max_units": 4,
+  "description": "An academic internship to provide the student with career experience as a computer scientist in a governmental, industrial, or research unit under the joint supervision of an off-campus sponsor and a faculty member in Computer Science. Each individual program must have the prior approval of both supervisors and the Department chair. A final written report is required. Course is repeatable to a maximum of 8 units. Graduate Courses",
+  "prerequisites_text": "upper-division standing; at least 12 units in Computer Science courses"
+ },
+ {
+  "subject": "MATH",
+  "number": "003",
+  "title": "College Mathematics Fundamentals and Problem Solving",
+  "min_units": 3,
+  "max_units": 3,
+  "description": "Prepares for success in a college-level mathematics course. Focuses on conceptual and problem solving. Emphasizes practicing symbolic reasoning, evaluating expressions, the meaning of quantities, variables, expressions, formulas, changes in quantities, inequalities, systems of equations, and functions (linear, exponential, logarithmic, quadratic, polynomial, rational, radical). Workload credit only; Graded Satisfactory (S) or No Credit (NC).",
+  "prerequisites_text": "a score on the Mathematics Advisory Examination, as determined by the Mathematics Department; restricted to freshman or an approved summer session enrollment; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "004",
+  "title": "Introduction to College Mathematics For Business and the Social Sciences",
+  "min_units": 5,
+  "max_units": 5,
+  "description": "Covers functions and their graphs including linear and polynomial functions, zeroes, and inverse functions as well as exponential and logarithmic functions and their inverses. Also includes counting including elementary probability. Involves applications to business and social sciences. Credit is awarded for one of the following MATH 004, MATH 005A, MATH 006A, or MATH 006B.",
+  "prerequisites_text": "MATH 003 or MATH 004L, may be taken concurrently; the Mathematics Department determines the study program pathway based upon the score on the Mathematics Advisory Examination; or a score of 2 on the AP Calculus AB Exam; not open to students in the Bourns College of Engineering or the College of Natural and Agricultural Sciences or to students majoring in Economics or Business Economics"
+ },
+ {
+  "subject": "MATH",
+  "number": "004L",
+  "title": "Introduction to College Mathematics For Business and the Social Sciences Workshop",
+  "min_units": 1,
+  "max_units": 1,
+  "description": "Just-in- time lessons and activities to enhance student foundations on functions and properties of functions from four perspectives (verbal, visual, numeric, and symbolic) to complement and support MATH 004. Graded Satisfactory (S) or No Credit (NC).",
+  "prerequisites_text": "MATH 004, may be taken concurrently; the Mathematics Department determines the study program pathway based upon the score on the Mathematics Advisory Examination; not open to students in the Bourns College of Engineering or the College of Natural and Agricultural Sciences or to students majoring in Economics or Business Economics; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "005A",
+  "title": "The Principles of Calculus 1",
+  "min_units": 5,
+  "max_units": 5,
+  "description": "A study of inequalities, absolute value, functions, graphing, logarithms, trigonometry, roots of polynomials, counting, vectors, and other elementary concepts of mathematics. Some sections may be offered online. Credit is awarded for one of the following MATH 005A, MATH 004, MATH 006A, or MATH 006B.",
+  "prerequisites_text": "a score of 2 on the AP Calculus AB Exam or a sufficiently high score on the Mathematics Advisory Examination, as determined by the Mathematics Department"
+ },
+ {
+  "subject": "MATH",
+  "number": "005B",
+  "title": "The Principles of Calculus 2",
+  "min_units": 5,
+  "max_units": 5,
+  "description": "An introduction to application of finite approximation to study functions of one variable. Topics include sequences, series, differential calculus, and antiderivatives. Credit is awarded for one of the following MATH 005B, MATH 007A, MATH 009A, or MATH 09HA.",
+  "prerequisites_text": "MATH 005A with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "005C",
+  "title": "The Principles of Calculus 3",
+  "min_units": 5,
+  "max_units": 5,
+  "description": "Further topics on infinite series including test of convergence and Taylor’s series. An introduction of integral calculus of one-variable with applications. Credit is awarded for one of the following MATH 005C, MATH 007B, MATH 009B, MATH 009C, MATH 09HB, or MATH 09HC.",
+  "prerequisites_text": "MATH 005B with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "006A",
+  "title": "Precalculus: An Introduction to Functions 1",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Develops and refines quantitative reasoning, covariational reasoning, problem solving, and algebraic proficiency in preparation for calculus. Topics include functions, properties of functions, ways to create new functions, and modeling real-world situations with functions. Specific functions covered include linear, exponential, and logarithmic functions. Credit is awarded for one of the following MATH 006A, MATH 004, or MATH 005A.",
+  "prerequisites_text": "MATH 003 or MATH 06LA, may be taken concurrently; the Mathematics Department determines the study program pathway based upon the score on the Mathematics Advisory Examination; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "006B",
+  "title": "Precalculus: An Introduction to Functions 2",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Develops and refines quantitative and covariational reasoning skills and problem solving skills in preparation for calculus. Topics include functions, properties of functions, modeling real world situations with functions, limits, and continuity. Specific functions covered include polynomial, rational, trigonometric, and inverse trigonometric functions. Credit is awarded for one of the following MATH 006B, MATH 004, or MATH 005A. MATH 06LA Precalculus Study Group: An Introduction to Functions 1 1 Discussion, 1 hour. Prerequisite(s): MATH 006A, may be taken concurrently; the Mathematics Department determines the study program pathway based upon the score on the Mathematics Advisory Examination; or consent of instructor. Just-in- time lessons and activities to enhance student foundations on functions and properties of functions from four perspectives (verbal, visual, numeric, and symbolic) to complement and support MATH 006A. Graded Satisfactory (S) or No Credit (NC). MATH 06LB Precalculus Study Group: An Introduction to Functions 2 1 Discussion, 1 hour. Prerequisite(s): MATH 006A with a grade of C- or better, MATH 06LB, may be taken concurrently; NOTE: MATH 006A with a grade of C-, C, or C+ requires concurrent enrollment in MATH 06LB; or MATH 006A with grades of B- or better may enroll in MATH 06LB as an option; or consent of instructor. Just-in-time lessons and activities to enhance student foundations on functions and properties of functions from four perspectives (verbal, visual, numeric, and symbolic) to complement MATH 006B. Graded Satisfactory (S) or No Credit (NC).",
+  "prerequisites_text": "MATH 006A with a grade of B- or better or MATH 006A with a grade of C- or better; MATH 06LB, may be taken concurrently; NOTE: MATH 006A with a grade of C-, C, or C+ requires concurrent enrollment in MATH 06LB; or MATH 006A with grades of B- or better may enroll in MATH 06LB as an option; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "007A",
+  "title": "Calculus For Life Sciences",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to the differential calculus of functions of one variable for students majoring in Life Sciences. Credit is awarded for one of the following MATH 007A, MATH 005B, MATH 009A, or MATH 09HA.",
+  "prerequisites_text": "MATH 005A or MATH 006B"
+ },
+ {
+  "subject": "MATH",
+  "number": "007B",
+  "title": "Calculus For Life Sciences",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to the integral calculus of functions of one variable. For Life Sciences majors. Credit is awarded for one of the following MATH 007B, MATH 005C, MATH 009B, or MATH 09HB.",
+  "prerequisites_text": "MATH 005B with a grade of C- or better or MATH 007A with a grade of C- or better or MATH 009A with a grade of C- or better or MATH 09HA with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "009A",
+  "title": "First-Year Calculus",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to the differential calculus of functions of one variable. Credit is awarded for one of the following MATH 009A, MATH 005B, MATH 007A, or MATH 09HA.",
+  "prerequisites_text": "MATH 005A with a grade of C- or better or MATH 006B"
+ },
+ {
+  "subject": "MATH",
+  "number": "009B",
+  "title": "First Year Calculus",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to the integral calculus of functions of one variable. Credit is awarded for one of the following MATH 009B, MATH 005C, MATH 007B, or MATH 09HB.",
+  "prerequisites_text": "MATH 005B with a grade of C- or better or MATH 009A or MATH 09HA"
+ },
+ {
+  "subject": "MATH",
+  "number": "009C",
+  "title": "First Year Calculus",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Further topics from integral calculus, improper integrals, infinite series, Taylor’s series, and Taylor’s theorem. Credit is awarded for one of the following MATH 009C, MATH 005C, or MATH 09HC. MATH 09HA First-Year Honors Calculus 4 Discussion, 1 hour; lecture, 3 hours. Prerequisite(s): admission to University Honors. Honors course corresponding to MATH 009A. Honors course corresponding to MATH 009A for students with strong mathematical backgrounds. Introduces the differential calculus of functions of one variable. Emphasis is on theory and rigor Satisfactory(S) or No Credit(N/C) is not available. Credit is awarded for one of the following MATH 09HA, MATH 005B, MATH 007A, or MATH 009A. MATH 09HB First-Year Honors Calculus 4 Discussion, 1 hour; lecture, 3 hours. Prerequisite(s): MATH 09HA with a grade of B or better; admission to University Honors. Honors course corresponding to MATH 009B. Honors course corresponding to MATH 009B for students with strong mathematical backgrounds. Introduces the integral calculus of functions of one variable. Emphasis is on theory and rigor. Credit is awarded for one of the following MATH 09HB, MATH 005C, MATH 007B, or MATH 009B. MATH 09HC First-Year Honors Calculus 4 Discussion, 1 hour; lecture, 3 hours. Prerequisite(s): MATH 09HB with a grade of B or better or MATH 009B with a grade of B or better; admission to University Honors. Honors course corresponding to MATH 009C. Further topics from integral calculus, improper integrals, infinite series, Taylor’s series, and Taylor’s theorem. Satisfactory(S) or No Credit(N/C) is not available. Credit is awarded for one of the following MATH 09HC, MATH 005C, or MATH 009C.",
+  "prerequisites_text": "MATH 009B with a grade of C- or better or MATH 09HB with a grade of C- or better or MATH 007B with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "010A",
+  "title": "Calculus of Several Variables",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Topics include Euclidean geometry, matrices and linear functions, determinants, partial derivatives, directional derivatives, Jacobians, gradients, chain rule, and Taylor’s theorem for several variables.",
+  "prerequisites_text": "MATH 005C with a grade of C- or better or MATH 007B with a grade of C- or better or MATH 009B with a grade of C- or better or MATH 09HB with a grade of C- or better; or equivalent"
+ },
+ {
+  "subject": "MATH",
+  "number": "010B",
+  "title": "Calculus of Several Variables",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers vectors; differential calculus, including implicit differentiation and extreme values; multiple integration; line integrals; vector field theory; and theorems of Gauss, Green, and Stokes.",
+  "prerequisites_text": "MATH 010A with a grade of “C-” or better or equivalent"
+ },
+ {
+  "subject": "MATH",
+  "number": "011",
+  "title": "Introduction to Discrete Structures",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to basic concepts of discrete mathematics emphasizing applications to computer science. Topics include propositional and predicate calculi, elementary set theory, functions, relations, proof techniques, elements of number theory, enumeration, and discrete probability. Cross-listed with CS 011.",
+  "prerequisites_text": "CS 009A or CS 010A or MATH 005C or MATH 007B or MATH 009B or MATH 09HB"
+ },
+ {
+  "subject": "MATH",
+  "number": "022",
+  "title": "Calculus For Business",
+  "min_units": 5,
+  "max_units": 5,
+  "description": "Explores relations and functions (e.g., linear, polynomial, logarithmic, and exponential). Addresses differential calculus of functions of one and two variables as well as integration (indefinite and definite) with applications to business and economic problems. Credit is not awarded for MATH 022 if a grade of “C-” or better has already been awarded for MATH 007A, MATH 009A, MATH 09HA, or MATH 005B.",
+  "prerequisites_text": "MATH 004 with a grade of C- or better or MATH 006B with a grade of C- or better or MATH 005A; or a sufficiently high score on the placement examination, as determined by the Mathematics Department"
+ },
+ {
+  "subject": "MATH",
+  "number": "031",
+  "title": "Applied Linear Algebra",
+  "min_units": 5,
+  "max_units": 5,
+  "description": "A study of matrices and systems of linear equations, determinants, Gaussian elimination, vector spaces, linear independence and linear transformation, orthogonality, eigenvalues, and eigenvectors. Also examines selected topics and applications. Credit is awarded for one of the following MATH 031 or EE 020B.",
+  "prerequisites_text": "CS 010A with a grade of C- or better or MATH 005C with a grade of C- or better or MATH 007B with a grade of C- or better or MATH 009B with a grade of C- or better or MATH 09HB with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "045",
+  "title": "Introduction to Ordinary Differential Equations For Physical Sciences and Engineering",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to ordinary differential equations; complex numbers; trigonometric, compact and exponential Fourier Series; frequency spectrum; and Laplace transform, Fourier transform, and their application to the solution of integro- differential equations as they appear in the physical sciences and engineering. Cross- listed with EE 020A. Credit is awarded for one of the following MATH 045, EE 020A, or MATH 046.",
+  "prerequisites_text": "MATH 005C with a grade of C- or better or MATH 007B with a grade of C- or better or MATH 009B with a grade of C- or better or MATH 09HB with a grade of C- or better; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "046",
+  "title": "Introduction to Ordinary Differential Equations",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to first-order equations, linear second-order equations, and Laplace transforms, with applications to the physical and biological sciences. Credit is awarded for one of the following MATH 046, EE 020A, or MATH 045. Upper-Division Courses Courses numbered MATH 100–109 do not meet upper-division mathematics requirements.",
+  "prerequisites_text": "MATH 005C with a grade of C- or better or MATH 007B with a grade of C- or better or MATH 009B with a grade of C- or better or MATH 09HB with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "110",
+  "title": "An Introduction to Mathematical Proofs",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to communicating mathematics through proofs. Topics include basic logic, set theory, functions, and various proof techniques such as induction, direct, contrapositive, contradiction, and cases. May also include equivalence relations, countability, number theory, structure of the real numbers, sequences, and continuity.",
+  "prerequisites_text": "MATH 009B with a grade of C- or better or MATH 09HB with a grade of C- or better or MATH 007B with a grade of C- or better or MATH 005C with a grade of C- or better; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "117",
+  "title": "Advanced Problem Solving",
+  "min_units": 1,
+  "max_units": 1,
+  "description": "5 hours; individual study, 1.5 hours. Prerequisite(s): restricted to class level standing of junior, or senior; or consent of instructor. Develops advanced problem-solving skills through rigorous mathematical exploration focusing on preparing for the William Lowell Putnam Mathematical Competition. Explores challenging problems in various mathematical areas including algebra, geometry, number theory, functional equations, combinatorics, geometry, and calculus, emphasizing non- standard approaches. Course is repeatable as content or topic changes. Graded Satisfactory (S) or No Credit (NC). Course is repeatable as content or topic changes to a maximum of 4 units.",
+  "prerequisites_text": ""
+ },
+ {
+  "subject": "MATH",
+  "number": "120",
+  "title": "Optimization",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to classical optimization including unconstrained and constrained problems in several variables, Addresses Jacobian and Lagrangian methods and the Kuhn-Tucker conditions. Covers the basic concepts of linear programming including the simplex method and duality with applications to other subjects.",
+  "prerequisites_text": "MATH 010A with a grade of “C-” or better; MATH 031 with a grade of “C-” or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "121",
+  "title": "Game Theory",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Examines games in extensive, normal, and characteristic form as models of conflict and/or cooperation. Covers two-person zero-sum games, minimax theorem, and relation to linear programming. Includes non-zero-sum games, Nash equilibrium theorem, bargaining, the core, and the Shapley value. Addresses economic market games.",
+  "prerequisites_text": "MATH 010A with a grade of C- or better, MATH 110 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "126",
+  "title": "Combinatorics",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A study of elements of combinatorics theory. Topics include chromatic polynomials, enumerating partitions of sets and integers, asymptotic enumeration, Polya theory, and Ramsey theory.",
+  "prerequisites_text": "MATH 011 with a grade of C- or better or CS 011 with a grade of C- or better or MATH 110 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "131",
+  "title": "Linear Algebra I",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to vector spaces, matrices, and linear transformations.",
+  "prerequisites_text": "MATH 010A with a grade of C- or better, may be taken concurrently; MATH 031 with a grade of C- or better; MATH 110 with a grade of C- or better, may be taken concurrently"
+ },
+ {
+  "subject": "MATH",
+  "number": "132",
+  "title": "Linear Algebra 2",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Further study of topics in linear algebra including eigenvalues. Exploration of Hermitian and unitary matrices, positive definite matrices, and canonical forms.",
+  "prerequisites_text": "MATH 131 with a grade of “C-” or better or equivalent"
+ },
+ {
+  "subject": "MATH",
+  "number": "133",
+  "title": "Geometry",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Analyzes elementary theory of affine and projective planes, the line at infinity, finite geometries, Euclidean and non-Euclidean geometries, groups of transformations, and other algebraic structures related to geometry.",
+  "prerequisites_text": "MATH 031 with a grade of C- or better, MATH 110 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "135A",
+  "title": "Introduction to Numerical Analysis 1",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduces basic numerical techniques for computing solutions of problems in science and engineering as well as computational implementation of such techniques using MATLAB and Python. Topics include floating point computation, error analysis, numerical methods for solutions of linear and nonlinear scalar and systems of equations, and numerical interpolation.",
+  "prerequisites_text": "CS 010A with a grade of C- or better, may be taken concurrently; MATH 031 with a grade of C- or better, may be taken concurrently; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "135B",
+  "title": "Introduction to Numerical Analysis 2",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduces basic numerical techniques for computing solutions of problems in science and engineering as well as computational implementation of such techniques using MATLAB and Python. Topics include numerical integration, Runge-Kutta methods for initial value problems, matrix factorizations, eigenvalues, and eigenvectors.",
+  "prerequisites_text": "MATH 135A with a grade of C- or better; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "135C",
+  "title": "Introduction to Numerical Analysis 3",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A continuation of Math 135B. Topics include least square method, Fourier series, numerical methods for PDEs, and numerical optimization.",
+  "prerequisites_text": "MATH 135B with a grade of C- or better; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "136",
+  "title": "Introduction to the Theory of Numbers",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers prime and composite integers, number theoretic functions, diophantine equations, congruences, quadratic reciprocity, and additive arithmetic.",
+  "prerequisites_text": "MATH 031 with a grade of C- or better, MATH 110 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "138A",
+  "title": "Introduction to Differential Geometry",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Examines elementary theory of curves and surfaces. Includes first and second fundamental forms.",
+  "prerequisites_text": "MATH 010A; MATH 031 with a grade of C- or better; MATH 110 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "138B",
+  "title": "Introduction to Differential Geometry",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers Gaussian curvature, geodesics, and the Gauss-Bonnet Theorem.",
+  "prerequisites_text": "MATH 010B with a grade of “C-” or better, MATH 138A with a grade of “C-” or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "140",
+  "title": "Polynomials and Number Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Topics include number systems, elementary number theory, rings, fields, polynomials, congruencies, and applications of finite fields.",
+  "prerequisites_text": "MATH 011 with a grade of C- or better or CS 011 with a grade of C- or better or MATH 110 with a grade of C- or better; MATH 031 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "144",
+  "title": "Introduction to Set Theory",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers algebra of subsets of a set. Addresses algebra of relations and functions. Explores cardinal and ordinal numbers and their arithmetic operations. Includes the well- ordering theorem, transfinite induction, and Zorn’s lemma.",
+  "prerequisites_text": "MATH 010A with a grade of C- or better; MATH 110 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "145A",
+  "title": "Introduction to Topology",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Addresses elementary topology in metric spaces.",
+  "prerequisites_text": "MATH 110 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "145B",
+  "title": "Introduction to Topology",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Explores geometric topology, algebra associated with finite complexes, and applications.",
+  "prerequisites_text": "MATH 145A with a grade of “C-” or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "146A",
+  "title": "Ordinary and Partial Differential Equations",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Focuses on the theory of linear differential equations and transform methods.",
+  "prerequisites_text": "MATH 005C with a grade of C- or better or MATH 009C with a grade of C- or better or MATH 09HC with a grade of C- or better; MATH 010A with a grade of C- or better; MATH 031 with a grade of C- or better, may be taken concurrently; MATH 046 with a grade of C- or better; MATH 110 with a grade of C- or better, may be taken concurrently"
+ },
+ {
+  "subject": "MATH",
+  "number": "146B",
+  "title": "Ordinary and Partial Differential Equations",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Further study of the theory of linear differential equations and problems in valuing ordinary differential equations.",
+  "prerequisites_text": "MATH 146A with a grade of “C-” or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "146C",
+  "title": "Ordinary and Partial Differential Equations",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Explores boundary value problems for partial differential equations, orthogonal expansions, and separation of variables.",
+  "prerequisites_text": "MATH 010B with a grade of “C-” or better, MATH 146B with a grade of “C-” or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "147",
+  "title": "Introduction to Fourier Analysis and its Applications",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers Fourier series expansions of periodic functions, properties, and convergence; the Dirichlet kernel; Fourier integrals and the Fourier transform in one and several variables; the Plancherel theorem; and Fourier inversion. Includes applications of Fourier analysis (e.g., to spectral theory, numerical analysis, ordinary and partial differential equations, and wavelet transform).",
+  "prerequisites_text": "MATH 005C with a grade of C- or better or MATH 009C with a grade of C- or better or MATH 09HC with a grade of C- or better; MATH 010B with a grade of C- or better; MATH 031 with a grade of C- or better, may be taken concurrently; MATH 046 with a grade of C- or better or MATH 146A with a grade of C- or better; MATH 110 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "148",
+  "title": "Introduction to Chaotic and Complex Dynamical Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Explores examples of dynamical systems, quadratic maps, maps of the circle, and higher-dimensional examples. Includes symbolic dynamics, Sarkovskii’s theorem, hyperbolicity, and structural stability. Introduces chaotic dynamical systems and the period doubling route to chaos. Also introduces basic notions from complex dynamics. Includes the Julia set and the Mandelbrot set.",
+  "prerequisites_text": "MATH 010B with a grade of “C-” or better; MATH 031 with a grade of “C-” or better; MATH 046 or MATH 146A with a grade of “C-” or better; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "149A",
+  "title": "Probability and Mathematical Statistics",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to the mathematical theory of probability and discrete and continuous distributions.",
+  "prerequisites_text": "MATH 010A with a grade of C- or better; MATH 010B with a grade of C- or better; MATH 046 with a grade of C- or better, may be taken concurrently; MATH 110 with a grade of C- or better, may be taken concurrently"
+ },
+ {
+  "subject": "MATH",
+  "number": "149B",
+  "title": "Probability and Mathematical Statistics",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A continuation of MATH 149A. Topics include sampling and limit distributions.",
+  "prerequisites_text": "MATH 010A with a grade of “C-” or better, MATH 010B with a grade of “C-” or better, MATH 046 with a grade of “C-” or better, MATH 149A with a grade of “C-” or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "150",
+  "title": "Intermediate Analysis",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A study of the concepts and theory of single-variable calculus. Covers the basics of real numbers, sequences, limits, continuity, and differentiation. Credit is awarded for one of the following MATH 150 or MATH 151A.",
+  "prerequisites_text": "MATH 005C with a grade of C- or better or MATH 009C with a grade of C- or better or MATH 09HC with a grade of C- or better; MATH 010B with a grade of C- or better; MATH 110 with a grade of C- or better, may be taken concurrently; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "151A",
+  "title": "Foundations of Real Analysis 1",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Provides a rigorous development of mathematical analysis includes the formal theory of the real numbers, convergent sequences, monotone sequences, subsequences, convergent tests, limit superior, limit inferior, Bolzano- Weierstrass theorem, Cauchy sequences, limit of functions, continuous functions, extreme value theorems, intermediate value theorems, uniform continuity, and continuity of monotone functions. Credit is awarded for one of the following MATH 151A or MATH 150.",
+  "prerequisites_text": "MATH 005C with a grade of C- or better or MATH 009C with a grade of C- or better or MATH 09HC with a grade of C- or better; MATH 010B with a grade of C- or better; MATH 110 with a grade of C- or better; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "151B",
+  "title": "Foundations of Real Analysis 2",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Provides a rigorous development of mathematical analysis. Includes properties of the derivative; mean value theorem, intermediate value theorem, Taylor’s theorem, inverse function theorem, fundamental theorem of calculus; Riemann integrable functions, sequences and series of functions, pointwise and uniform convergence of functions, and the continuity, integral, and derivative of the limit.",
+  "prerequisites_text": "MATH 151A with a grade of C- or better; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "151C",
+  "title": "Foundations of Real Analysis 3",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Provides a rigorous development of mathematical analysis. Includes metric spaces, open and closed sets, connected sets, closure and boundary, convergent sequences, Cauchy sequences, completeness, compactness, Heine-Borel theorem, continuity, uniform continuity, limits, the derivative, gradients, curves, partial derivatives, the Jacobian, continuity and the derivative, and inverse and implicit function theorems.",
+  "prerequisites_text": "MATH 131 with a grade of C- or better; MATH 151B with a grade of C- or better; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "153",
+  "title": "History of Mathematics",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A survey from a historical point of view of various developments in mathematics. Emphasizes the nineteenth and early twentieth centuries.",
+  "prerequisites_text": "MATH 005C with a grade of C- or better or MATH 009C with a grade of C- or better or MATH 09HC with a grade of C- or better; MATH 110 with a grade of C- or better; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "161A",
+  "title": "Mathematical Foundations of Machine Learning",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to mathematical and computational concepts in machine learning methods with emphasis on developing new machine learning algorithms. Topics include linear algebra and vector calculus in application to supervised learning, regression, classification, unsupervised learning, clustering, and dimensionality reduction. Topics also include optimization and probability theory used in machine learning algorithms.",
+  "prerequisites_text": "MATH 010A with a grade of C- or better; MATH 031 with a grade of C- or better; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "161B",
+  "title": "Mathematical Foundations of Deep Learning",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to core mathematical principles in deep learning, emphasizing training neural networks for computer vision. Topics cover various architectures, image transformation techniques (segmentation, super-resolution, denoising), object detection, and transfer learning. Also explores key optimization tools and neural network visualization to ground theoretical innovations in deep learning, providing practical insights.",
+  "prerequisites_text": "MATH 161A with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "161C",
+  "title": "Mathematical Foundations of Artificial Intelligence",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Exploration of essential mathematical concepts for artificial intelligence, covering natural language processing, generative networks, and reinforcement learning. Topics include text classification, multimodal learning, and advanced generative models (GANs, diffusion models). Emphasizes domain adaptation, semi-supervised, and self-supervised learning with applications in real-world AI tasks.",
+  "prerequisites_text": "MATH 161B with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "162",
+  "title": "Mathematical Models and Computational Science",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to mathematical and computational modeling using high- level computer programming languages such as C/C++. Includes implementation of parallel algorithms for solving linear systems, systems of differential equations, and running stochastic imulations on high performance CPU and GPU computer clusters.",
+  "prerequisites_text": "MATH 031 with a grade of C- or better, MATH 135A with a grade of C- or better; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "163",
+  "title": "Applied Dynamical Systems",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Introduction to dynamical systems with applications to problems in Physics, Biology, Chemistry, and Engineering. Topics include phase plane analysis, stability of dynamical systems, and numerical methods for dynamical systems.",
+  "prerequisites_text": "MATH 045 with a grade of C- or better or MATH 046 with a grade of C- or better; MATH 031 with a grade of C- or better; MATH 135A with a grade of C- or better; or equivalent; or consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "165A",
+  "title": "Introduction to Complex Variables",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to the theory of analytic functions of a complex variable. Includes mappings by elementary functions and complex integrals as well as Cauchy’s theorem, power series, and Laurent series.",
+  "prerequisites_text": "MATH 010B with a grade of C- or better; MATH 110 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "165B",
+  "title": "Introduction to Complex Variables",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Topics include the theory of residues, conformal mapping, and applications to physical problems.",
+  "prerequisites_text": "MATH 010B with a grade of “C-” or better, MATH 165A with a grade of “C-” or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "168",
+  "title": "Introduction to Mathematical Modeling",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "A detailed study of how mathematical methods are applied to specific problems in the sciences and engineering fields. Utilizes examples taken from the theories of mechanical vibrations, population dynamics, and flow phenomena.",
+  "prerequisites_text": "MATH 146A"
+ },
+ {
+  "subject": "MATH",
+  "number": "171",
+  "title": "Introduction to Modern Algebra",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "An introduction to the fundamental concepts of modern algebra. Covers groups, subgroups, quotient groups, homomorphisms, symmetry groups, fundamental properties of rings, integral domains, ideals, and quotient rings.",
+  "prerequisites_text": "MATH 110 with a grade of C- or better; MATH 131 with a grade of C- or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "172",
+  "title": "Modern Algebra",
+  "min_units": 4,
+  "max_units": 4,
+  "description": "Covers fundamental concepts of modern algebra. Includes groups, fields, polynomials, geometric constructions, algebraic coding, and boolean algebras.",
+  "prerequisites_text": "MATH 171 with a grade of “C-” or better"
+ },
+ {
+  "subject": "MATH",
+  "number": "190",
+  "title": "Special Studies",
+  "min_units": 1,
+  "max_units": 5,
+  "description": "To be taken with the consent of the chair of the department as a means of meeting special curricular problems. Course is repeatable.",
+  "prerequisites_text": ""
+ },
+ {
+  "subject": "MATH",
+  "number": "194",
+  "title": "Independent Reading",
+  "min_units": 1,
+  "max_units": 2,
+  "description": "Independent reading in materials not covered in course work. Normally taken in the senior year. Total credit for MATH 194 may not exceed 4 units.",
+  "prerequisites_text": ""
+ },
+ {
+  "subject": "MATH",
+  "number": "197",
+  "title": "Research For Undergraduates",
+  "min_units": 1,
+  "max_units": 4,
+  "description": "Involves a research project on a problem in, or related to, mathematics conducted under the supervision of a Mathematics faculty member. Students who submit a term paper receive a letter grade; other students receive a Satisfactory (S) or No Credit (NC) grade. Course is repeatable to a maximum of 8 units.",
+  "prerequisites_text": "upper-division standing; consent of instructor"
+ },
+ {
+  "subject": "MATH",
+  "number": "198I",
+  "title": "Internship in Mathematics",
+  "min_units": 1,
+  "max_units": 4,
+  "description": "An academic internship to provide the student with career experience as a mathematician in a governmental, industrial, or research unit under the joint supervision of an off-campus sponsor and a faculty member in Mathematics. Each individual program must have the prior approval of both supervisors and the department chair. A final written report is required. Graded Satisfactory (S) or No Credit (NC). May be repeated for a total of 8 units. Graduate Courses",
+  "prerequisites_text": "upper- division standing, with at least 12 units of upper-division credits toward the major"
+ }
+]

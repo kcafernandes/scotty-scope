@@ -1,0 +1,11 @@
+CLAUDE.md
+
+# raw source files (catalog PDF must never be committed)
+data-pipeline/raw/
+
+# secrets
+.env
+
+# dependencies
+venv/
+node_modules/
