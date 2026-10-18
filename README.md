@@ -13,14 +13,21 @@ By building Scotty Scope, I hope to simplify this process for fellow UCR student
 - **Backend:** FastAPI (Python)
 - **Database:** PostgreSQL, running in Docker
 - **ORM:** SQLAlchemy
+- **Data loading:** Python script that loads course data from JSON into the database
+
+### Course Data
+
+Course titles, units, descriptions, and prerequisites come from the UCR 2026-2027 General Catalog. The database currently holds 144 Computer Science and Mathematics courses, with more departments to come.
 
 ### Status
 
 Currently in active development. Progress so far:
 
 - ✅ Frontend skeleton — search flow, results page, course page
-- ✅ Backend skeleton — FastAPI routes, connected to the frontend
-- 🔄 Database integration — PostgreSQL and SQLAlchemy models in place, migrating from mock data to real queries
+- ✅ Backend API — FastAPI routes, connected to the frontend
+- ✅ Database — PostgreSQL and SQLAlchemy models, with a Docker setup
+- ✅ Real course data — 144 CS and MATH courses loaded from the UCR catalog, shown on the course page
+- 🔜 Next — making search work with real data, then more departments, ratings, and prerequisites
 
 See [open issues](https://github.com/kcafernandes/scotty-scope/issues) for what's in progress.
 
