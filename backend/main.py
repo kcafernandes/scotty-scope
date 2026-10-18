@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 from database import engine, Base, get_db
 import models
@@ -22,12 +23,15 @@ def read_root():
     return {"message": "scotty scope backend is running"}
 
 @app.get("/courses", response_model=list[CourseOut])
-def get_courses(db: Session = Depends(get_db)):
-    return db.query(Course).all()
+def get_courses(subject: str | None = None, db: Session = Depends(get_db)):
+    query = db.query(Course).join(Subject)
+    if subject:
+        query = query.filter(func.upper(Subject.code) == subject.upper())
+    return query.order_by(Subject.code, Course.number).all()
 
 @app.get("/courses/{code}", response_model=CourseOut)
 def get_course(code: str, db: Session = Depends(get_db)):
-    subject_code, number = code.split(" ", 1)
+    subject_code, _, number = code.partition(" ")
     course = (
         db.query(Course)
         .join(models.Subject)
