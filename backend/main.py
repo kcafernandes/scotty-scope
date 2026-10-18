@@ -1,3 +1,4 @@
+import re
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import func
@@ -27,7 +28,13 @@ def get_courses(subject: str | None = None, db: Session = Depends(get_db)):
     query = db.query(Course).join(Subject)
     if subject:
         query = query.filter(func.upper(Subject.code) == subject.upper())
-    return query.order_by(Subject.code, Course.number).all()
+    return sorted(query.all(), key=course_sort_key)
+
+def course_sort_key(course):
+    match = re.match(r"(\d+)(.*)", course.number)
+    if match is None:
+        return (course.subject.code, 1, 0, course.number)
+    return (course.subject.code, 0, int(match.group(1)), match.group(2))
 
 @app.get("/courses/{code}", response_model=CourseOut)
 def get_course(code: str, db: Session = Depends(get_db)):

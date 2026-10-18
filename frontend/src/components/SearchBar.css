@@ -15,7 +15,39 @@
     font-size: 16px;
     box-sizing: border-box;
   }
-  
+
+  .search-bar .subject-field {
+    position: relative;
+    display: flex;
+    flex: 1 1 180px;
+  }
+
+  .search-bar .subject-field input {
+    width: 100%;
+    padding-right: 40px;
+  }
+
+  .search-bar .clear-subject {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: #6b6375;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .search-bar .clear-subject:hover {
+    background: #f4f3ec;
+  }
+
   .search-bar .dropdown {
     flex-basis: 100%;
     list-style: none;

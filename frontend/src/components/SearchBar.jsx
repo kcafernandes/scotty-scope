@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './SearchBar.css'
 
 function SearchBar() {
     const navigate = useNavigate()
+    const subjectInput = useRef(null)
+    const latestSubjectRequest = useRef('')
     const [ subjects, setSubjects ] = useState([])
     const [ courses, setCourses ] = useState([])
     const [ subjectPicked, setSubjectPicked] = useState(false)
@@ -33,13 +35,48 @@ function SearchBar() {
         navigate(`/course/${encodeURIComponent(`${selectedSubject} ${number}`)}`)
     }
 
+    function unpickSubject(){
+        latestSubjectRequest.current = ''
+        setSubjectPicked(false)
+        setSelectedSubject('')
+        setCourses([])
+        setSubjectNumber('')
+    }
+
     function handleSubjectClick(subject){
+        latestSubjectRequest.current = subject.code
         setSelectedSubject(subject.code)
         setSubjectText(subject.code)
         setSubjectPicked(true)
+        setCourses([])
+        setSubjectNumber('')
         fetch(`http://127.0.0.1:8000/courses?subject=${encodeURIComponent(subject.code)}`)
             .then((response) => response.json())
-            .then((data) => setCourses(data))
+            .then((data) => {
+                if (latestSubjectRequest.current === subject.code) {
+                    setCourses(data)
+                }
+            })
+    }
+
+    function handleSubjectChange(event){
+        setSubjectText(event.target.value)
+        if(subjectPicked){
+            unpickSubject()
+        }
+    }
+
+    function handleSubjectBoxClick(event){
+        if(subjectPicked){
+            unpickSubject()
+            event.target.select()
+        }
+    }
+
+    function handleClearSubject(){
+        unpickSubject()
+        setSubjectText('')
+        subjectInput.current.focus()
     }
 
     function handleSubjectKeyDown(event){
@@ -72,13 +109,27 @@ function SearchBar() {
 
     return(
         <div className="search-bar">
-            <input
-                type="text"
-                placeholder="Search for courses.."
-                value={subjectText}
-                onChange={(e) => setSubjectText(e.target.value)}
-                onKeyDown={handleSubjectKeyDown}
-            />
+            <div className="subject-field">
+                <input
+                    ref={subjectInput}
+                    type="text"
+                    placeholder="Search for courses.."
+                    value={subjectText}
+                    onChange={handleSubjectChange}
+                    onClick={handleSubjectBoxClick}
+                    onKeyDown={handleSubjectKeyDown}
+                />
+                {subjectText !== '' && (
+                    <button
+                        type="button"
+                        className="clear-subject"
+                        aria-label="Clear subject"
+                        onClick={handleClearSubject}
+                    >
+                        ×
+                    </button>
+                )}
+            </div>
 
             {!subjectPicked && (
                 <ul className="dropdown">
