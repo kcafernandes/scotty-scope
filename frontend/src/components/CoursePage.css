@@ -9,6 +9,11 @@
     text-align: center;
     margin-bottom: 20px;
 }
+
+.course-page .course-subtitle {
+    text-align: center;
+    margin-top: -12px;
+}
   
 .course-page h3 {
     margin-top: 32px;

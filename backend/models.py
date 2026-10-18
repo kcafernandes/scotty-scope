@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import relationship
 from database import Base
 
@@ -15,6 +15,10 @@ class Course(Base):
     id = Column(Integer, primary_key=True)
     number = Column(String, nullable=False)
     title = Column(String, nullable=False)
+    min_units = Column(Integer, nullable=False)
+    max_units = Column(Integer, nullable=False)
+    description = Column(Text, nullable=False)
+    prerequisites_text = Column(Text, nullable=True)
     subject_id = Column(Integer, ForeignKey("subjects.id"), nullable=False)
 
     subject = relationship("Subject")

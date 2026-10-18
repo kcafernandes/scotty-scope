@@ -12,6 +12,10 @@ class CourseOut(BaseModel):
     id: int
     number: str
     title: str
+    min_units: int
+    max_units: int
+    description: str
+    prerequisites_text: str | None
     subject: SubjectOut
 
     class Config:
