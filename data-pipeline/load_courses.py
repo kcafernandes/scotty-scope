@@ -2,38 +2,46 @@ import json
 import sys
 from pathlib import Path
 
-# the backend uses flat imports (from database import ...), so add backend/ to the path
 BACKEND_DIR = Path(__file__).resolve().parent.parent / "backend"
 sys.path.insert(0, str(BACKEND_DIR))
 
 from database import engine, SessionLocal, Base
 from models import Subject, Course
 
-# loads real UCR courses from courses.json into the database
-# new courses are inserted; existing courses (same subject code + number) are left alone,
-# unless you run with --update, which also refreshes their title, units, description and prerequisites
-# nothing is ever deleted
-#
-# usage (from the project folder, with the backend venv):
-#   python data-pipeline/load_courses.py            insert new courses only
-#   python data-pipeline/load_courses.py --update   insert new courses and update existing ones
-
-COURSES_FILE = Path(__file__).resolve().parent / "courses.json"
-
-SUBJECT_NAMES = {
-    "CS": "Computer Science",
-    "MATH": "Mathematics",
-}
+DATA_DIR = Path(__file__).resolve().parent
+COURSES_FILE = DATA_DIR / "courses.json"
+SUBJECTS_FILE = DATA_DIR / "subjects.json"
 
 UPDATABLE_FIELDS = ["title", "min_units", "max_units", "description", "prerequisites_text"]
 
-def get_or_create_subject(session, code):
-    subject = session.query(Subject).filter(Subject.code == code).first()
-    if subject is None:
-        subject = Subject(code=code, name=SUBJECT_NAMES[code])
-        session.add(subject)
-        session.flush()
-    return subject
+def load_json(path):
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+def sync_subjects(session, subject_names):
+    existing = {subject.code: subject for subject in session.query(Subject).all()}
+    subjects = {}
+    inserted = 0
+    renamed = 0
+    unchanged = 0
+
+    for code, name in subject_names.items():
+        subject = existing.get(code)
+        if subject is None:
+            subject = Subject(code=code, name=name)
+            session.add(subject)
+            inserted += 1
+        elif subject.name != name:
+            print(f"renamed subject {code}: {subject.name} -> {name}")
+            subject.name = name
+            renamed += 1
+        else:
+            unchanged += 1
+        subjects[code] = subject
+
+    session.flush()
+    print(f"subjects: inserted {inserted}, renamed {renamed}, unchanged {unchanged}")
+    return subjects
 
 def course_values(entry):
     return {
@@ -47,10 +55,14 @@ def course_values(entry):
 def main():
     update = "--update" in sys.argv[1:]
 
-    Base.metadata.create_all(bind=engine)
+    courses = load_json(COURSES_FILE)
+    subject_names = load_json(SUBJECTS_FILE)
 
-    with open(COURSES_FILE, encoding="utf-8") as f:
-        courses = json.load(f)
+    missing_subjects = sorted({entry["subject"] for entry in courses} - set(subject_names))
+    if missing_subjects:
+        sys.exit(f"Stopped: these subject codes are in courses.json but not in subjects.json: {', '.join(missing_subjects)}. Nothing was changed.")
+
+    Base.metadata.create_all(bind=engine)
 
     session = SessionLocal()
     inserted = 0
@@ -59,17 +71,15 @@ def main():
     skipped = 0
 
     try:
-        subjects = {code: get_or_create_subject(session, code) for code in SUBJECT_NAMES}
+        subjects = sync_subjects(session, subject_names)
+        existing_courses = {
+            (course.subject_id, course.number): course for course in session.query(Course).all()
+        }
 
         for entry in courses:
             subject = subjects[entry["subject"]]
             values = course_values(entry)
-
-            course = (
-                session.query(Course)
-                .filter(Course.subject_id == subject.id, Course.number == entry["number"])
-                .first()
-            )
+            course = existing_courses.get((subject.id, entry["number"]))
 
             if course is None:
                 session.add(Course(number=entry["number"], subject=subject, **values))
@@ -94,7 +104,7 @@ def main():
     finally:
         session.close()
 
-    print(f"inserted {inserted}, updated {updated}, unchanged {unchanged}")
+    print(f"courses: inserted {inserted}, updated {updated}, unchanged {unchanged}")
     if skipped:
         print(f"{skipped} existing courses differ from the file but were not changed (run with --update to update them)")
 
