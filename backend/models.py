@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, Float, Date, ForeignKey
+from sqlalchemy import Column, Integer, String, Text, Float, Date, Boolean, JSON, ForeignKey, text
 from sqlalchemy.orm import relationship
 from database import Base
 
@@ -46,3 +46,13 @@ class ReviewRedirect(Base):
     course_id = Column(Integer, ForeignKey("courses.id"), nullable=False, unique=True)
     target_course_id = Column(Integer, ForeignKey("courses.id"), nullable=False)
     target_course = relationship("Course", foreign_keys=[target_course_id])
+
+class CoursePrerequisite(Base):
+    __tablename__ = "course_prerequisites"
+
+    id = Column(Integer, primary_key=True)
+    course_id = Column(Integer, ForeignKey("courses.id"), nullable=False, unique=True)
+    groups = Column(JSON, nullable=False)
+    notes = Column(JSON, nullable=False)
+    consent_of_instructor = Column(Boolean, nullable=False)
+    corequisites = Column(JSON, nullable=False, server_default=text("'[]'::json"))

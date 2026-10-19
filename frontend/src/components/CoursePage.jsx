@@ -2,6 +2,7 @@ import './CoursePage.css'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import CourseRatings from './CourseRatings'
+import PrerequisiteVisualizer from './PrerequisiteVisualizer'
 
 const LONG_TITLE_LENGTH = 60
 const LONG_DEPARTMENT_LENGTH = 40
@@ -95,7 +96,10 @@ function CoursePage(){
                     </div>
                 </div>
 
-                <PlaceholderBox title="Prerequisite Visualizer" className="block-visualizer" />
+                <PrerequisiteVisualizer
+                    key={`prerequisites ${course.subject.code} ${course.number}`}
+                    courseCode={`${course.subject.code} ${course.number}`}
+                />
 
                 <CourseRatings key={`${course.subject.code} ${course.number}`} course={course} />
 

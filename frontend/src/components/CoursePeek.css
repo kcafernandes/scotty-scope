@@ -1,0 +1,199 @@
+.peek-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background: rgba(0, 0, 0, 0.45);
+    animation: peek-fade-in 180ms ease-out;
+}
+
+.peek-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    width: min(460px, 100%);
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    box-shadow: -16px 0 40px rgba(0, 0, 0, 0.4);
+    animation: peek-slide-in 220ms ease-out;
+}
+
+.peek-panel:focus {
+    outline: none;
+}
+
+.peek-toolbar {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.peek-open,
+.peek-close {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--accent-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--accent);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.peek-open {
+    padding: 5px 13px;
+}
+
+.peek-close {
+    padding: 2px 11px 4px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.peek-open:hover,
+.peek-close:hover {
+    background: var(--accent-bg);
+}
+
+.peek-open:focus-visible,
+.peek-close:focus-visible,
+.peek-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.peek-body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 20px 24px 28px;
+}
+
+.peek-code {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+}
+
+.peek-title {
+    margin: 4px 0 16px;
+    font-size: 17px;
+    color: var(--text-h);
+}
+
+.peek-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.peek-fact {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--code-bg);
+    color: var(--text-h);
+    font-weight: 600;
+}
+
+.peek-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.peek-units {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.peek-section {
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--code-bg);
+}
+
+.peek-section h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--text-h);
+}
+
+.peek-section p {
+    margin: 0;
+}
+
+.peek-description {
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.peek-rating {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.peek-rating-value {
+    font-size: 34px;
+    line-height: 1.1;
+}
+
+.peek-muted {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.peek-link {
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--accent);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.peek-status {
+    margin-top: 40px;
+}
+
+@keyframes peek-slide-in {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes peek-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .peek-backdrop,
+    .peek-panel {
+        animation: none;
+    }
+}
