@@ -35,3 +35,21 @@ class ReviewOut(BaseModel):
     difficulty: int | None
     comment: str
     date: datetime.date | None
+
+class PrerequisiteOptionOut(BaseModel):
+    code: str
+    concurrent: bool
+    grade: str | None
+
+class PrerequisiteMapCourseOut(BaseModel):
+    title: str | None
+    in_database: bool
+    groups: list[list[PrerequisiteOptionOut]]
+    notes: list[str]
+    consent_of_instructor: bool
+    corequisites: list[str]
+
+class PrerequisiteMapOut(BaseModel):
+    top: str
+    has_course_prerequisites: bool
+    courses: dict[str, PrerequisiteMapCourseOut]

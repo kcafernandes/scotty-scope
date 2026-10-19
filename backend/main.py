@@ -1,12 +1,12 @@
 import re
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy import func
+from sqlalchemy import func, tuple_, cast, Text
 from sqlalchemy.orm import Session
 from database import engine, Base, get_db
 import models
-from models import Course, Subject, Review, CourseDifficulty, ReviewRedirect
-from schemas import CourseOut, CourseDetailOut, SeeCourseOut, ReviewOut
+from models import Course, Subject, Review, CourseDifficulty, ReviewRedirect, CoursePrerequisite
+from schemas import CourseOut, CourseDetailOut, SeeCourseOut, ReviewOut, PrerequisiteMapCourseOut, PrerequisiteMapOut
 
 Base.metadata.create_all(bind=engine)
 
@@ -83,6 +83,77 @@ def get_course_reviews(code: str, db: Session = Depends(get_db)):
         ReviewOut(difficulty=review.difficulty, comment=review.comment, date=review.review_date)
         for review in reviews
     ]
+
+def find_courses_with_prerequisites(codes, db):
+    pairs = [tuple(code.split(" ", 1)) for code in codes if " " in code]
+    if not pairs:
+        return {}
+    rows = (
+        db.query(Subject.code, Course.number, Course.title, CoursePrerequisite)
+        .select_from(Course)
+        .join(Subject)
+        .outerjoin(CoursePrerequisite, CoursePrerequisite.course_id == Course.id)
+        .filter(tuple_(Subject.code, Course.number).in_(pairs))
+        .all()
+    )
+    return {f"{subject_code} {number}": (title, prerequisite) for subject_code, number, title, prerequisite in rows}
+
+def find_listed_by(db):
+    rows = (
+        db.query(Subject.code, Course.number, CoursePrerequisite.corequisites)
+        .select_from(CoursePrerequisite)
+        .join(Course, CoursePrerequisite.course_id == Course.id)
+        .join(Subject)
+        .filter(cast(CoursePrerequisite.corequisites, Text) != "[]")
+        .all()
+    )
+    listed_by = {}
+    for subject_code, number, corequisites in rows:
+        for partner in corequisites:
+            listed_by.setdefault(partner, []).append(f"{subject_code} {number}")
+    return listed_by
+
+@app.get("/courses/{code}/prerequisite-map", response_model=PrerequisiteMapOut)
+def get_prerequisite_map(code: str, db: Session = Depends(get_db)):
+    course = find_course(code, db)
+    top = f"{course.subject.code} {course.number}"
+    listed_by = find_listed_by(db)
+
+    courses = {}
+    seen = {top}
+    to_visit = [top]
+    while to_visit:
+        found = find_courses_with_prerequisites(to_visit, db)
+        next_visit = []
+        for visit_code in to_visit:
+            if visit_code not in found:
+                continue
+            title, prerequisite = found[visit_code]
+            groups = prerequisite.groups if prerequisite else []
+            own_partners = prerequisite.corequisites if prerequisite else []
+            corequisites = own_partners + [
+                partner for partner in listed_by.get(visit_code, []) if partner not in own_partners
+            ]
+            courses[visit_code] = PrerequisiteMapCourseOut(
+                title=title,
+                in_database=True,
+                groups=groups,
+                notes=prerequisite.notes if prerequisite else [],
+                consent_of_instructor=prerequisite.consent_of_instructor if prerequisite else False,
+                corequisites=corequisites,
+            )
+            linked_codes = [option["code"] for group in groups for option in group] + corequisites
+            for linked_code in linked_codes:
+                if linked_code not in seen:
+                    seen.add(linked_code)
+                    next_visit.append(linked_code)
+        to_visit = next_visit
+
+    return PrerequisiteMapOut(
+        top=top,
+        has_course_prerequisites=bool(courses[top].groups),
+        courses=courses,
+    )
 
 @app.get("/subjects")
 def get_subjects(db: Session = Depends(get_db)):
