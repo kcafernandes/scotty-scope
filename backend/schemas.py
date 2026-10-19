@@ -1,3 +1,4 @@
+import datetime
 from pydantic import BaseModel
 
 class SubjectOut(BaseModel):
@@ -20,3 +21,17 @@ class CourseOut(BaseModel):
 
     class Config:
         from_attributes = True
+
+class SeeCourseOut(BaseModel):
+    subject_code: str
+    number: str
+
+class CourseDetailOut(CourseOut):
+    average_difficulty: float | None
+    review_count: int
+    see_course: SeeCourseOut | None
+
+class ReviewOut(BaseModel):
+    difficulty: int | None
+    comment: str
+    date: datetime.date | None

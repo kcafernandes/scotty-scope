@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, ForeignKey
+from sqlalchemy import Column, Integer, String, Text, Float, Date, ForeignKey
 from sqlalchemy.orm import relationship
 from database import Base
 
@@ -22,3 +22,27 @@ class Course(Base):
     subject_id = Column(Integer, ForeignKey("subjects.id"), nullable=False)
 
     subject = relationship("Subject")
+
+class Review(Base):
+    __tablename__ = "reviews"
+
+    id = Column(Integer, primary_key=True)
+    course_id = Column(Integer, ForeignKey("courses.id"), nullable=False, index=True)
+    difficulty = Column(Integer, nullable=True)
+    comment = Column(Text, nullable=False)
+    review_date = Column(Date, nullable=True)
+
+class CourseDifficulty(Base):
+    __tablename__ = "course_difficulties"
+
+    id = Column(Integer, primary_key=True)
+    course_id = Column(Integer, ForeignKey("courses.id"), nullable=False, unique=True)
+    average_difficulty = Column(Float, nullable=False)
+
+class ReviewRedirect(Base):
+    __tablename__ = "review_redirects"
+
+    id = Column(Integer, primary_key=True)
+    course_id = Column(Integer, ForeignKey("courses.id"), nullable=False, unique=True)
+    target_course_id = Column(Integer, ForeignKey("courses.id"), nullable=False)
+    target_course = relationship("Course", foreign_keys=[target_course_id])

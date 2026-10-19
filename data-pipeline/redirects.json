@@ -1,0 +1,128 @@
+[
+ {
+  "subject": "AHS",
+  "number": "030",
+  "see_subject": "CLA",
+  "see_number": "017"
+ },
+ {
+  "subject": "ANTH",
+  "number": "006",
+  "see_subject": "MUS",
+  "see_number": "006"
+ },
+ {
+  "subject": "AST",
+  "number": "023",
+  "see_subject": "CPLT",
+  "see_number": "023"
+ },
+ {
+  "subject": "AST",
+  "number": "046",
+  "see_subject": "CHN",
+  "see_number": "046"
+ },
+ {
+  "subject": "AST",
+  "number": "150",
+  "see_subject": "JPN",
+  "see_number": "150"
+ },
+ {
+  "subject": "BIOL",
+  "number": "104",
+  "see_subject": "BPSC",
+  "see_number": "104"
+ },
+ {
+  "subject": "BIOL",
+  "number": "132",
+  "see_subject": "BPSC",
+  "see_number": "132"
+ },
+ {
+  "subject": "CRWT",
+  "number": "066",
+  "see_subject": "TFDP",
+  "see_number": "066"
+ },
+ {
+  "subject": "CS",
+  "number": "011",
+  "see_subject": "MATH",
+  "see_number": "011"
+ },
+ {
+  "subject": "CS",
+  "number": "120A",
+  "see_subject": "EE",
+  "see_number": "120A"
+ },
+ {
+  "subject": "CS",
+  "number": "120B",
+  "see_subject": "EE",
+  "see_number": "120B"
+ },
+ {
+  "subject": "ENGR",
+  "number": "108",
+  "see_subject": "HIST",
+  "see_number": "108"
+ },
+ {
+  "subject": "ENGR",
+  "number": "109",
+  "see_subject": "HIST",
+  "see_number": "109"
+ },
+ {
+  "subject": "ENTM",
+  "number": "162",
+  "see_subject": "BIOL",
+  "see_number": "162"
+ },
+ {
+  "subject": "HIST",
+  "number": "027",
+  "see_subject": "CLA",
+  "see_number": "017"
+ },
+ {
+  "subject": "HIST",
+  "number": "044",
+  "see_subject": "RLST",
+  "see_number": "044"
+ },
+ {
+  "subject": "JPN",
+  "number": "023",
+  "see_subject": "CPLT",
+  "see_number": "023"
+ },
+ {
+  "subject": "LING",
+  "number": "162",
+  "see_subject": "PSYC",
+  "see_number": "128"
+ },
+ {
+  "subject": "MCS",
+  "number": "006",
+  "see_subject": "ART",
+  "see_number": "006"
+ },
+ {
+  "subject": "ME",
+  "number": "144",
+  "see_subject": "EE",
+  "see_number": "144"
+ },
+ {
+  "subject": "STAT",
+  "number": "127",
+  "see_subject": "BUS",
+  "see_number": "127"
+ }
+]
