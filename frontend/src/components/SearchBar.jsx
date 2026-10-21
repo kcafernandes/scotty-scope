@@ -1,22 +1,32 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useId, useLayoutEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './SearchBar.css'
+import { coursePath, loadSubjectCourses, loadSubjects, subjectPath } from './catalog'
+
+const LIST_MAX_HEIGHT = 320
+const LIST_MIN_HEIGHT = 160
+const LIST_BOTTOM_SPACE = 24
 
 function SearchBar() {
     const navigate = useNavigate()
+    const searchArea = useRef(null)
     const subjectInput = useRef(null)
+    const subjectList = useRef(null)
     const latestSubjectRequest = useRef('')
+    const subjectListId = useId()
+    const [ listOpen, setListOpen ] = useState(false)
     const [ subjects, setSubjects ] = useState([])
     const [ courses, setCourses ] = useState([])
     const [ subjectPicked, setSubjectPicked] = useState(false)
     const [ selectedSubject, setSelectedSubject ] = useState('')
     const [ subjectText, setSubjectText ] = useState('')
     const [ subjectNumber, setSubjectNumber ] = useState('')
+    const [ message, setMessage ] = useState('')
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/subjects')
-            .then((response) => response.json())
+        loadSubjects()
             .then((data) => setSubjects(data))
+            .catch(() => setMessage('Sorry, the subjects could not be loaded. Please try again.'))
     }, [])
 
     const filteredSubjects = subjects.filter((subject) =>
@@ -27,12 +37,71 @@ function SearchBar() {
         course.number.toLowerCase().startsWith(subjectNumber.toLowerCase())
     )
 
+    const subjectListShown = listOpen && !subjectPicked
+
+    useLayoutEffect(() => {
+        if (!subjectListShown) {
+            return
+        }
+        function fitToWindow() {
+            const list = subjectList.current
+            const space = window.innerHeight - list.getBoundingClientRect().top - LIST_BOTTOM_SPACE
+            list.style.maxHeight = `${Math.min(LIST_MAX_HEIGHT, Math.max(LIST_MIN_HEIGHT, space))}px`
+        }
+        fitToWindow()
+        window.addEventListener('resize', fitToWindow)
+        return () => window.removeEventListener('resize', fitToWindow)
+    }, [subjectListShown, message])
+
+    function closeList(returnFocus){
+        if (returnFocus) {
+            subjectInput.current.focus()
+        }
+        setListOpen(false)
+    }
+
+    function handleSearchAreaBlur(event){
+        if (!searchArea.current.contains(event.relatedTarget)) {
+            setListOpen(false)
+        }
+    }
+
+    function subjectOptions(){
+        return [...subjectList.current.querySelectorAll('[role=option]')]
+    }
+
+    function handleOptionKeyDown(event, subject){
+        const options = subjectOptions()
+        const index = options.indexOf(event.currentTarget)
+        if (event.key === 'ArrowDown') {
+            event.preventDefault()
+            options[Math.min(index + 1, options.length - 1)]?.focus()
+        } else if (event.key === 'ArrowUp') {
+            event.preventDefault()
+            if (index <= 0) {
+                subjectInput.current.focus()
+            } else {
+                options[index - 1].focus()
+            }
+        } else if (event.key === 'Home' || event.key === 'End') {
+            event.preventDefault()
+            options[event.key === 'Home' ? 0 : options.length - 1]?.focus()
+        } else if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault()
+            handleSubjectClick(subject)
+            subjectInput.current.focus()
+        } else if (event.key === 'Escape') {
+            event.preventDefault()
+            closeList(true)
+        }
+    }
+
     function goToResults(subjectCode){
-        navigate(`/results/${encodeURIComponent(subjectCode)}`)
+        navigate(subjectPath(subjectCode))
     }
 
     function goToCourse(number){
-        navigate(`/course/${encodeURIComponent(`${selectedSubject} ${number}`)}`)
+        navigate(coursePath(`${selectedSubject} ${number}`))
     }
 
     function unpickSubject(){
@@ -50,16 +119,18 @@ function SearchBar() {
         setSubjectPicked(true)
         setCourses([])
         setSubjectNumber('')
-        fetch(`http://127.0.0.1:8000/courses?subject=${encodeURIComponent(subject.code)}`)
-            .then((response) => response.json())
+        setMessage('')
+        loadSubjectCourses(subject.code)
             .then((data) => {
                 if (latestSubjectRequest.current === subject.code) {
                     setCourses(data)
                 }
             })
+            .catch(() => setMessage('Sorry, the courses could not be loaded. Please try again.'))
     }
 
     function handleSubjectChange(event){
+        setMessage('')
         setSubjectText(event.target.value)
         if(subjectPicked){
             unpickSubject()
@@ -67,6 +138,7 @@ function SearchBar() {
     }
 
     function handleSubjectBoxClick(event){
+        setListOpen(true)
         if(subjectPicked){
             unpickSubject()
             event.target.select()
@@ -80,13 +152,23 @@ function SearchBar() {
     }
 
     function handleSubjectKeyDown(event){
+        if(event.key === 'Escape'){
+            setListOpen(false)
+            return
+        }
+        if(event.key === 'ArrowDown' && !subjectPicked){
+            event.preventDefault()
+            setListOpen(true)
+            requestAnimationFrame(() => subjectOptions()[0]?.focus())
+            return
+        }
         if(event.key === 'Enter' && event.target.value.trim() !== ''){
             const typedSubject = event.target.value.trim().toLowerCase()
             const subject = subjects.find((subject) => subject.code.toLowerCase() === typedSubject)
             if(subject){
                 goToResults(subject.code)
             } else {
-                alert('Subject not found.')
+                setMessage('Subject not found.')
             }
         }
     }
@@ -102,20 +184,26 @@ function SearchBar() {
             if(course){
                 goToCourse(course.number)
             } else {
-                alert('Course not found.')
+                setMessage('Course not found.')
             }
         }
     }
 
     return(
-        <div className="search-bar">
+        <div className="search-bar" ref={searchArea} onBlur={handleSearchAreaBlur}>
             <div className="subject-field">
                 <input
                     ref={subjectInput}
                     type="text"
                     placeholder="Search for courses.."
+                    role="combobox"
+                    aria-label="Search for a subject"
+                    aria-autocomplete="list"
+                    aria-controls={subjectListId}
+                    aria-expanded={subjectListShown}
                     value={subjectText}
                     onChange={handleSubjectChange}
+                    onFocus={() => setListOpen(true)}
                     onClick={handleSubjectBoxClick}
                     onKeyDown={handleSubjectKeyDown}
                 />
@@ -131,10 +219,26 @@ function SearchBar() {
                 )}
             </div>
 
+            {message && <p className="search-message" role="alert">{message}</p>}
+
             {!subjectPicked && (
-                <ul className="dropdown">
+                <ul
+                    ref={subjectList}
+                    id={subjectListId}
+                    className={subjectListShown ? 'dropdown subject-list is-open' : 'dropdown subject-list'}
+                    role="listbox"
+                    aria-label="Subjects"
+                >
                     {filteredSubjects.map((subject) => (
-                        <li key={subject.id} onClick={() => handleSubjectClick(subject)}>
+                        <li
+                            key={subject.id}
+                            role="option"
+                            aria-selected="false"
+                            tabIndex={subjectListShown ? 0 : -1}
+                            onMouseDown={(event) => event.preventDefault()}
+                            onClick={() => handleSubjectClick(subject)}
+                            onKeyDown={(event) => handleOptionKeyDown(event, subject)}
+                        >
                             {subject.code} – {subject.name}
                         </li>
                     ))}
@@ -147,7 +251,10 @@ function SearchBar() {
                         type="text"
                         placeholder="Enter course number"
                         value={subjectNumber}
-                        onChange={(e) => setSubjectNumber(e.target.value)}
+                        onChange={(e) => {
+                            setMessage('')
+                            setSubjectNumber(e.target.value)
+                        }}
                         onKeyDown={handleNumberKeyDown}
                     />
 

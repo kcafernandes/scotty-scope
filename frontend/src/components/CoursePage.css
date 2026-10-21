@@ -2,7 +2,7 @@
     --grid-gap: 22px;
     box-sizing: border-box;
     width: 100%;
-    padding: var(--grid-gap);
+    padding: 8px var(--grid-gap) var(--grid-gap);
     text-align: left;
 }
 
@@ -283,6 +283,14 @@
 @media (min-width: 900px) {
     #root:has(.course-page) {
         height: 100svh;
+    }
+
+    .page-layout:has(.course-page),
+    .page-layout:has(.course-page) .page-content {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     .course-page {

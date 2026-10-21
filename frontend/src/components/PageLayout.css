@@ -1,0 +1,38 @@
+.page-layout {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: calc(var(--page-max-width) + 2 * var(--page-gutter));
+    margin: 0 auto;
+    padding: 0 var(--page-gutter) 48px;
+}
+
+.page-layout.is-wide {
+    max-width: none;
+    padding: 0;
+}
+
+.back-row {
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.is-wide .back-row {
+    padding: 6px var(--page-gutter) 0;
+}
+
+.back-link {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.back-link:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 2px;
+}
