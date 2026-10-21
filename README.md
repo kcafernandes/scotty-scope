@@ -15,21 +15,6 @@ By building Scotty Scope, I hope to simplify this process for fellow UCR student
 - **ORM:** SQLAlchemy
 - **Data loading:** Python script that loads course and subject data from JSON into the database
 
-### Setup
-
-You need Docker Desktop, Python 3 and Node.js.
-
-1. Create your settings files. Copy `database/.env.example` to `database/.env`, and `backend/.env.example` to `backend/.env`. These files stay on your computer and are never committed.
-2. Pick a password and put it in both files: `POSTGRES_PASSWORD` in `database/.env` and `DB_PASSWORD` in `backend/.env` must be the same. To make a strong one, run `python -c "import secrets; print(secrets.token_urlsafe(24))"`.
-3. Start the database: `cd database`, then `docker-compose up -d`. It only accepts connections from your own computer.
-4. Start the backend:
-   - Windows (PowerShell): `cd backend`, `python -m venv venv`, `venv\Scripts\activate`, `pip install -r requirements.txt`, then `uvicorn main:app --reload`
-   - Mac: `cd backend`, `python3 -m venv venv`, `source venv/bin/activate`, `pip install -r requirements.txt`, then `uvicorn main:app --reload`
-5. Load the data (with the venv active, from the project folder): `python data-pipeline/load_courses.py`, then `python data-pipeline/load_prerequisites.py`, and `python data-pipeline/load_reviews.py` if you have the review files (see below). All loaders are safe to run again and never delete anything.
-6. Start the frontend: `cd frontend`, `npm install`, then `npm run dev`, and open the address it prints.
-
-If a setting is missing, the backend stops and tells you which one to add to `backend/.env`.
-
 ### Data Sources and Credits
 
 - **UCR General Catalog (2026-2027):** course titles, units, descriptions and prerequisites. These are included in the repo as `data-pipeline/courses.json`, `subjects.json` and `prerequisites.json`. The catalog PDF itself is not included.
