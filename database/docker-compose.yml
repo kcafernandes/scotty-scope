@@ -3,14 +3,13 @@ services:
     image: postgres:16
     restart: always
     environment:
-      POSTGRES_USER: scotty
-      POSTGRES_PASSWORD: scotty_dev_password
-      POSTGRES_DB: scotty_scope
-    ports: 
-    - "5432:5432"
+      POSTGRES_USER: ${POSTGRES_USER:?Missing POSTGRES_USER. Copy database/.env.example to database/.env and fill it in.}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Missing POSTGRES_PASSWORD. Copy database/.env.example to database/.env and fill it in.}
+      POSTGRES_DB: ${POSTGRES_DB:?Missing POSTGRES_DB. Copy database/.env.example to database/.env and fill it in.}
+    ports:
+    - "127.0.0.1:5432:5432"
     volumes:
     - pgdata:/var/lib/postgresql/data
 
 volumes:
   pgdata:
-
