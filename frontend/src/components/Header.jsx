@@ -1,13 +1,16 @@
 import './Header.css'
+import { Link } from 'react-router-dom'
+import Breadcrumb from './Breadcrumb'
 
-function Header() {
+function Header({ breadcrumb }) {
     return(
         <header>
-            <div className="logo">ScottyScope</div>
-            <nav>
-                <a href="#courses">Course</a>
-                <a href="#about">About</a>
-                <a href="#help">Help</a>
+            <Link className="logo" to="/">ScottyScope</Link>
+            <div className="header-breadcrumb">
+                {breadcrumb && <Breadcrumb trail={breadcrumb} />}
+            </div>
+            <nav className="header-nav" aria-label="Main">
+                <Link className="header-link" to="/">Search</Link>
             </nav>
         </header>
     )

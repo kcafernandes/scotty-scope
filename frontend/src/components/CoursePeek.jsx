@@ -1,6 +1,7 @@
 import './CoursePeek.css'
 import { useEffect, useId, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import CourseCodeText from './CourseCodeText'
 
 const peekCache = new Map()
 
@@ -48,6 +49,13 @@ function PeekRating({ course, onNavigate }){
 }
 
 function PeekContent({ course, headingId, onNavigate }){
+    const peekCode = `${course.subject.code} ${course.number}`
+
+    function followLink(event, code) {
+        event.preventDefault()
+        onNavigate(code)
+    }
+
     const units = course.min_units === course.max_units
         ? `${course.min_units}`
         : `${course.min_units}-${course.max_units}`
@@ -70,12 +78,18 @@ function PeekContent({ course, headingId, onNavigate }){
 
             <section className="peek-section">
                 <h3>Course Description</h3>
-                <div className="peek-description">{course.description}</div>
+                <div className="peek-description">
+                    <CourseCodeText text={course.description} currentCode={peekCode} onCourseClick={followLink} />
+                </div>
             </section>
 
             <section className="peek-section">
                 <h3>Prerequisites</h3>
-                <p>{course.prerequisites_text || 'None listed'}</p>
+                <p>
+                    {course.prerequisites_text
+                        ? <CourseCodeText text={course.prerequisites_text} currentCode={peekCode} onCourseClick={followLink} />
+                        : 'None listed'}
+                </p>
             </section>
 
             <section className="peek-section">
