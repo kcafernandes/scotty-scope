@@ -53,3 +53,9 @@ class PrerequisiteMapOut(BaseModel):
     top: str
     has_course_prerequisites: bool
     courses: dict[str, PrerequisiteMapCourseOut]
+
+class StatsOut(BaseModel):
+    courses: int
+    subjects: int
+    reviews: int
+    courses_with_prerequisite_maps: int
