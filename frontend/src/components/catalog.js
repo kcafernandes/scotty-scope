@@ -34,6 +34,10 @@ export function loadSubjectCourses(subjectCode) {
     return courseRequests.get(key)
 }
 
+export function loadStats() {
+    return getJson(`${API_URL}/stats`)
+}
+
 export async function findSubject(subjectCode) {
     const subjects = await loadSubjects()
     return subjects.find((subject) => subject.code.toUpperCase() === subjectCode.toUpperCase()) ?? null
