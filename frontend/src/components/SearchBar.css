@@ -49,10 +49,38 @@
     background: var(--code-bg);
   }
 
-  .search-bar .clear-subject:focus-visible,
-  .search-bar input:focus-visible {
+  .search-bar .clear-subject:focus-visible {
     outline: var(--focus-ring);
     outline-offset: 2px;
+  }
+
+  .search-bar input {
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+
+  .search-bar input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 22px var(--accent-bg), 0 0 40px var(--accent-bg);
+  }
+
+  .search-bar .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    transform: translateY(-50%);
+    color: var(--text);
+    pointer-events: none;
+  }
+
+  .search-bar .subject-field:focus-within .search-icon {
+    color: var(--accent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .search-bar input {
+      transition: none;
+    }
   }
 
   .search-bar .search-message {
@@ -98,6 +126,7 @@
 
   .search-bar .subject-list {
     display: none;
+    pointer-events: none;
     opacity: 0;
     transform: translateY(-6px);
     transition: opacity 150ms ease, transform 150ms ease, display 150ms allow-discrete;
@@ -105,6 +134,7 @@
 
   .search-bar .subject-list.is-open {
     display: block;
+    pointer-events: auto;
     opacity: 1;
     transform: translateY(0);
   }

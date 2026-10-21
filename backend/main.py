@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from database import engine, Base, get_db
 import models
 from models import Course, Subject, Review, CourseDifficulty, ReviewRedirect, CoursePrerequisite
-from schemas import CourseOut, CourseDetailOut, SeeCourseOut, ReviewOut, PrerequisiteMapCourseOut, PrerequisiteMapOut
+from schemas import CourseOut, CourseDetailOut, SeeCourseOut, ReviewOut, PrerequisiteMapCourseOut, PrerequisiteMapOut, StatsOut
 
 Base.metadata.create_all(bind=engine)
 
@@ -158,3 +158,16 @@ def get_prerequisite_map(code: str, db: Session = Depends(get_db)):
 @app.get("/subjects")
 def get_subjects(db: Session = Depends(get_db)):
     return db.query(Subject).all()
+
+@app.get("/stats", response_model=StatsOut)
+def get_stats(db: Session = Depends(get_db)):
+    return StatsOut(
+        courses=db.query(func.count(Course.id)).scalar(),
+        subjects=db.query(func.count(Subject.id)).scalar(),
+        reviews=db.query(func.count(Review.id)).scalar(),
+        courses_with_prerequisite_maps=(
+            db.query(func.count(CoursePrerequisite.id))
+            .filter(cast(CoursePrerequisite.groups, Text) != "[]")
+            .scalar()
+        ),
+    )
