@@ -2,6 +2,7 @@ import './CoursePeek.css'
 import { useEffect, useId, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import CourseCodeText from './CourseCodeText'
+import { API_URL } from '../config'
 
 const peekCache = new Map()
 
@@ -110,7 +111,7 @@ function CoursePeek({ code, onClose, onNavigate }){
         if (peekCache.has(code)) {
             return
         }
-        fetch(`http://127.0.0.1:8000/courses/${encodeURIComponent(code)}`)
+        fetch(`${API_URL}/courses/${encodeURIComponent(code)}`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Could not load course')

@@ -1,3 +1,4 @@
+import os
 import re
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
@@ -10,12 +11,17 @@ from schemas import CourseOut, CourseDetailOut, SeeCourseOut, ReviewOut, Prerequ
 
 Base.metadata.create_all(bind=engine)
 
+def read_allowed_origins():
+    raw = os.getenv("FRONTEND_ORIGINS", "")
+    origins = [origin.strip().rstrip("/") for origin in raw.split(",") if origin.strip() and origin.strip() != "*"]
+    return origins or ["http://localhost:5173"]
+
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_methods=["*"],
+    allow_origins=read_allowed_origins(),
+    allow_methods=["GET"],
     allow_headers=["*"],
 )
 

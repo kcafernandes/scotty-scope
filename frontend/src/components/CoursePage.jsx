@@ -8,6 +8,7 @@ import StatusMessage from './StatusMessage'
 import NotFoundPage from './NotFoundPage'
 import CourseCodeText from './CourseCodeText'
 import { subjectPath } from './catalog'
+import { API_URL } from '../config'
 
 const LONG_TITLE_LENGTH = 60
 const LONG_DEPARTMENT_LENGTH = 40
@@ -34,7 +35,7 @@ function CoursePage(){
 
     useEffect(() => {
         let active = true
-        fetch(`http://127.0.0.1:8000/courses/${encodeURIComponent(courseCode)}`)
+        fetch(`${API_URL}/courses/${encodeURIComponent(courseCode)}`)
             .then((response) => {
                 if (response.status === 404) {
                     return { status: 'missing', course: null }

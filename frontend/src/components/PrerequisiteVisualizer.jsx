@@ -2,6 +2,7 @@ import './PrerequisiteVisualizer.css'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
+import { API_URL } from '../config'
 import {
     COMPACT_LAYOUT,
     LARGE_LAYOUT,
@@ -45,7 +46,7 @@ function PrerequisiteVisualizer({ courseCode }){
     const [swap, setSwap] = useState(null)
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/courses/${encodeURIComponent(courseCode)}/prerequisite-map`)
+        fetch(`${API_URL}/courses/${encodeURIComponent(courseCode)}/prerequisite-map`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Could not load prerequisite map')
