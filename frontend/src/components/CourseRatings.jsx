@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { API_URL } from '../config'
 
 const SURVEY_URL = 'https://docs.google.com/forms/d/1ieV9hByRgtBzp4mrEwRcNBNFnLC9f4XfZ6RPoa-NrD4/viewform'
 
@@ -70,7 +71,7 @@ function ReviewsBox({ course, seeCourseCode }){
         if (!hasReviews) {
             return
         }
-        fetch(`http://127.0.0.1:8000/courses/${encodeURIComponent(courseCode)}/reviews`)
+        fetch(`${API_URL}/courses/${encodeURIComponent(courseCode)}/reviews`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Could not load reviews')

@@ -5,6 +5,9 @@ data-pipeline/raw/
 
 # secrets
 .env
+.env.*
+!.env.example
+.vercel
 
 # dependencies
 venv/
